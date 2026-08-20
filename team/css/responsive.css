@@ -1,0 +1,154 @@
+/* =========================================
+   TEAM PAGE - RESPONSIVE
+========================================= */
+
+
+/* =========================================
+   Large Tablet / Small Desktop
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .team-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 1.5rem;
+    }
+
+}
+
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width: 850px) {
+
+    .team-hero {
+        min-height: 330px;
+    }
+
+    .team-hero__content {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 1.5rem;
+    }
+
+    .team-section {
+        padding: 4rem 0;
+    }
+
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Hero */
+
+    .team-hero {
+        min-height: 320px;
+    }
+
+    .team-hero__content {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .team-hero__title {
+        font-size: 2.2rem;
+    }
+
+    .team-hero__description {
+        max-width: 100%;
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* Sections */
+
+    .team-section {
+        padding: 3.5rem 0;
+    }
+
+
+    /* Section Heading */
+
+    .section-heading {
+        margin-bottom: 2rem;
+    }
+
+    .section-heading__title {
+        font-size: 1.8rem;
+    }
+
+    .section-heading__description {
+        font-size: 0.95rem;
+    }
+
+
+    /* Team Grid */
+
+    .team-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 360px;
+
+        margin: 0 auto;
+
+        gap: 1.5rem;
+    }
+
+
+    /* Team Card */
+
+    .team-card__image-wrapper {
+        padding-top: 2rem;
+    }
+
+    .team-card__image {
+        width: 130px;
+        height: 130px;
+    }
+
+}
+
+
+/* =========================================
+   Very Small Mobile
+========================================= */
+
+@media (max-width: 400px) {
+
+    .team-hero {
+        min-height: 300px;
+    }
+
+    .team-hero__title {
+        font-size: 2rem;
+    }
+
+    .team-hero__description {
+        font-size: 0.95rem;
+    }
+
+    .team-card__name {
+        font-size: 1.1rem;
+    }
+
+    .team-card__role {
+        font-size: 0.9rem;
+    }
+
+}

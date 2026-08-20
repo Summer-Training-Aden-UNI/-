@@ -1,0 +1,144 @@
+/* =========================================
+   TEAM PAGE - HERO
+========================================= */
+
+.team-hero {
+    position: relative;
+    min-height: 360px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: var(--text-light);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(27, 42, 27, 0.94),
+            rgba(46, 125, 50, 0.82)
+        ),
+        url("../images/hero-bg.jpg") center / cover no-repeat;
+}
+
+/* Decorative background shape */
+.team-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -150px;
+    left: -100px;
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+}
+
+.team-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    bottom: -100px;
+    right: 8%;
+
+    border: 2px solid rgba(249, 168, 37, 0.18);
+
+    border-radius: 50%;
+}
+
+
+/* Hero Content */
+
+.team-hero__content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 850px;
+
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+
+/* Badge */
+
+.team-hero__badge {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 1rem;
+    padding: 0.45rem 1rem;
+
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+/* Title */
+
+.team-hero__title {
+    margin: 0 0 1rem;
+
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+/* Description */
+
+.team-hero__description {
+    max-width: 650px;
+
+    margin: 0 0 1.5rem;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+
+/* Breadcrumb */
+
+.team-hero__breadcrumb {
+    display: flex;
+    align-items: center;
+
+    gap: 0.6rem;
+
+    font-size: 0.9rem;
+}
+
+.team-hero__breadcrumb a {
+    color: var(--text-light);
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.team-hero__breadcrumb a:hover {
+    color: var(--accent-color);
+}
+
+.team-hero__breadcrumb span:last-child {
+    color: rgba(255, 255, 255, 0.65);
+}
