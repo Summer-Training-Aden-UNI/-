@@ -56,6 +56,20 @@
     /* Transition */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
+    --primary-color: #2E7D32;
+    --primary-light: #4CAF50;
+    --secondary-color: #1565C0;
+    --accent-color: #F9A825;
+
+    --text-dark: #212121;
+    --text-light: #FAFAFA;
+
+    --bg-light: #F5F5F5;
+    --bg-dark: #1B2A1B;
+
+    /* ADD THESE */
+    --white: #FFFFFF;
+    --border-color: #E5E5E5;
 }
 
 
@@ -914,4 +928,4 @@ p {
         transition-duration: 0.01ms !important;
     }
 }
-```
+
