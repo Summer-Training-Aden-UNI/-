@@ -1,0 +1,108 @@
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: var(--white);
+}
+
+
+/* -------------------------
+   Background
+------------------------- */
+.hero__background {
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+}
+
+.hero__background img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* -------------------------
+   Overlay
+------------------------- */
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(27, 42, 27, 0.85),
+            rgba(27, 42, 27, 0.55),
+            rgba(27, 42, 27, 0.35)
+        );
+}
+
+
+/* -------------------------
+   Content
+------------------------- */
+.hero > .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero__content {
+    max-width: 700px;
+
+    padding: 5rem 0;
+}
+
+.hero__subtitle {
+    margin-bottom: 1rem;
+
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.hero__title {
+    margin-bottom: 1.5rem;
+
+    color: var(--white);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.hero__description {
+    max-width: 620px;
+    margin-bottom: 2rem;
+
+    color: rgba(250, 250, 250, 0.9);
+    font-size: 1.1rem;
+}
+
+
+/* -------------------------
+   Actions
+------------------------- */
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero__actions .btn--secondary {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
