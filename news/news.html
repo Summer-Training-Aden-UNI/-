@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أخبار ومستجدات قرية المشاوز - متابعة المشاريع التنموية، المبادرات التكافلية والأنشطة المجتمعية لصندوق المشاوز التكافلي التنموي.">
+
+    <title>أخبار القرية | صندوق المشاوز التكافلي التنموي</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="css/main(news).css">
+    <link rel="stylesheet" href="css/header(news).css">
+    <link rel="stylesheet" href="css/hero(news).css">
+    <link rel="stylesheet" href="css/footer(news).css">
+    <link rel="stylesheet" href="css/responsive(news).css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+    <header class="site-header">
+        <div class="container">
+
+            <!-- Logo -->
+            <a href="../-/Index/index.html" class="site-header__logo" aria-label="الرئيسية - صندوق المشاوز">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #2E7D32, #1B5E20); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <span style="font-weight: 800; font-size: 1.1rem; color: #1B5E20; line-height: 1.2;">صندوق المشاوز</span>
+                        <span style="font-size: 0.75rem; color: #666; font-weight: 600;">التكافلي التنموي</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="site-header__menu-toggle" type="button" aria-label="فتح القائمة" id="menuToggleBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <nav class="site-header__nav" id="mainNav" aria-label="القائمة الرئيسية">
+                <ul class="site-header__nav-list">
+                    <li class="site-header__nav-item">
+                        <a href="../-/Index/index.html">الرئيسية</a>
+                    </li>
+                    <li class="site-header__nav-item">
+                        <a href="about.html">عن الصندوق</a>
+                    </li>
+                    <li class="site-header__nav-item">
+                        <a href="village.html">عن قرية المشاوز</a>
+                    </li>
+                    <li class="site-header__nav-item site-header__nav-item--dropdown" id="projectsDropdown">
+                        <a href="projects.html">المشاريع</a>
+                        <ul class="site-header__dropdown">
+                            <li><a href="projects.html">المشاريع التنموية</a></li>
+                            <li><a href="solidarity.html">المشاريع التكافلية</a></li>
+                        </ul>
+                    </li>
+                    <li class="site-header__nav-item">
+                        <a href="news.html" style="color: var(--primary-color); font-weight: 700; background-color: var(--primary-soft);">أخبار القرية</a>
+                    </li>
+                    <li class="site-header__nav-item">
+                        <a href="team.html">فريق العمل</a>
+                    </li>
+                    <li class="site-header__nav-item">
+                        <a href="governance.html">الحوكمة</a>
+                    </li>
+                    <li class="site-header__nav-item">
+                        <a href="contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="contribute.html" class="btn btn--primary">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                ساهم معنا
+            </a>
+
+        </div>
+    </header>
+
+    <!-- =====================================================
+         URGENT ANNOUNCEMENT TICKER
+    ====================================================== -->
+    <div class="news-ticker">
+        <div class="container">
+            <div class="news-ticker__wrapper">
+                <span class="news-ticker__label">
+                    <i class="fa-solid fa-bullhorn"></i> إعلان هام
+                </span>
+                <p class="news-ticker__text">
+                    تم بحمد الله اكتمال مرحلة حفر البئر الارتوازية وتدشين منظومة الضخ الشمسية بالحي الغربي لقرية المشاوز.
+                    <a href="#featured-article" class="news-ticker__link">التفاصيل والتغطية الكاملة &larr;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- =====================================================
+             HERO SECTION
+        ====================================================== -->
+        <section class="news-hero">
+            <div class="news-hero__overlay"></div>
+
+            <div class="container news-hero__content">
+                <span class="news-hero__badge">
+                    <i class="fa-solid fa-newspaper"></i> المركز الإخباري الرسمي
+                </span>
+
+                <h1 class="news-hero__title">
+                    أخبار ومستجدات قرية المشاوز
+                </h1>
+
+                <p class="news-hero__description">
+                    تابع أولاً بأول كافة الإنجازات التنموية، الأنشطة التكافلية، والتقارير الإدارية والفعاليات المجتمعية في القرية.
+                </p>
+
+                <!-- Hero Live Search -->
+                <div class="news-hero__search-box">
+                    <input type="text" class="news-hero__search-input" id="heroSearchInput" placeholder="ابحث عن مشروع، خبر، أو فعالية في القرية...">
+                    <button class="news-hero__search-btn" type="button" id="heroSearchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i> بحث
+                    </button>
+                </div>
+
+                <!-- Breadcrumb -->
+                <nav class="news-hero__breadcrumb" aria-label="مسار التنقل">
+                    <a href="../-/Index/index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                    <span>/</span>
+                    <span class="active">أخبار القرية</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             FEATURED SPOTLIGHT ARTICLE
+        ====================================================== -->
+        <section class="featured-news-section" id="featured-article">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-heading__label">الحدث الأبرز</span>
+                    <h2 class="section-heading__title">الخبر الرئيس للأسبوع</h2>
+                </div>
+
+                <article class="featured-card">
+                    <div class="featured-card__image">
+                        <img src="images/news_featured.png" alt="تدشين مشروع مياه قرية المشاوز">
+                        <div class="featured-card__overlay-tag">
+                            <span class="news-badge news-badge--featured">
+                                <i class="fa-solid fa-star"></i> مشروع تنموي رئيس
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="featured-card__content">
+                        <div class="featured-card__meta">
+                            <span><i class="fa-regular fa-calendar-days"></i> 20 أغسطس 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 4 دقائق قراءة</span>
+                            <span><i class="fa-regular fa-eye"></i> 1,420 مشاهدة</span>
+                        </div>
+
+                        <h3 class="featured-card__title">
+                            <a href="#">تدشين مشروع منظومة الضخ بالتقنية الشمسية لمياه قرية المشاوز بنجاح</a>
+                        </h3>
+
+                        <p class="featured-card__excerpt">
+                            في إطار سعي صندوق المشاوز لتحقيق التنمية المستدامة، تم بحمد الله وتوفيقه اليوم افتتاح وتشغيل مشروع منظومة الطاقة الشمسية لمشروع المياه الرئيسي بالقرية، والذي يضمن تدفق المياه الصالحة للشرب لأكثر من 350 أسرة secara مستدام ودون تكاليف وقود إضافية.
+                        </p>
+
+                        <div class="featured-card__footer">
+                            <div class="featured-card__author">
+                                <div class="featured-card__avatar">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                </div>
+                                <div class="featured-card__author-info">
+                                    <h4>اللجنة الإعلامية</h4>
+                                    <p>صندوق المشاوز التكافلي</p>
+                                </div>
+                            </div>
+
+                            <a href="#" class="btn btn--primary">
+                                اقرأ التقرير الكامل <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             MAIN NEWS GRID & SIDEBAR SECTION
+        ====================================================== -->
+        <section class="news-main-section">
+            <div class="container">
+
+                <!-- Filter & Controls Bar -->
+                <div class="news-filter-bar">
+                    <div class="news-tabs" id="newsCategoriesTabs">
+                        <button class="tab-btn active" data-category="all">الكل (6)</button>
+                        <button class="tab-btn" data-category="development">المشاريع التنموية</button>
+                        <button class="tab-btn" data-category="solidarity">المبادرات التكافلية</button>
+                        <button class="tab-btn" data-category="village">أخبار القرية</button>
+                        <button class="tab-btn" data-category="reports">التقارير والحوكمة</button>
+                    </div>
+
+                    <div class="news-sort-box">
+                        <label for="newsSortSelect"><i class="fa-solid fa-filter"></i> الترتيب:</label>
+                        <select id="newsSortSelect" class="news-sort-select">
+                            <option value="latest">الأحدث أولاً</option>
+                            <option value="popular">الأكثر قراءة</option>
+                            <option value="oldest">الأقدم أولاً</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- News Layout: Grid + Sidebar -->
+                <div class="news-layout">
+
+                    <!-- Left: Main Articles Grid -->
+                    <div class="news-content-area">
+
+                        <div class="news-grid" id="newsGrid">
+
+                            <!-- News Card 1 -->
+                            <article class="news-card" data-category="development">
+                                <div class="news-card__image-wrap">
+                                    <img src="images/news_road.png" alt="مشروع رصف طريق المشاوز">
+                                    <div class="news-card__badge">
+                                        <span class="news-badge">مشروع تنموي</span>
+                                    </div>
+                                </div>
+                                <div class="news-card__body">
+                                    <div class="news-card__meta">
+                                        <span><i class="fa-regular fa-calendar-days"></i> 15 أغسطس 2026</span>
+                                        <span><i class="fa-regular fa-clock"></i> 3 دقائق</span>
+                                    </div>
+                                    <h3 class="news-card__title">
+                                        <a href="#">إنجاز 80% من مشروع رصف طريق عقبة المشاوز بالأحجار البركانية</a>
+                                    </h3>
+                                    <p class="news-card__excerpt">
+                                        تواصل فرق العمل الميدانية بالتعاون مع شباب القرية انجاز أعمال الرصف الحجري للحد من مخاطر سيول الأمطار وتسهيل حركة السيارات.
+                                    </p>
+                                    <div class="news-card__footer">
+                                        <a href="#" class="news-card__link">
+                                            اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
+                                        </a>
+                                        <div class="news-card__actions">
+                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
+                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- News Card 2 -->
+                            <article class="news-card" data-category="village">
+                                <div class="news-card__image-wrap">
+                                    <img src="images/news_school.png" alt="تكريم الطلاب المتفوقين">
+                                    <div class="news-card__badge">
+                                        <span class="news-badge news-badge--solidarity">تعليم وثقافة</span>
+                                    </div>
+                                </div>
+                                <div class="news-card__body">
+                                    <div class="news-card__meta">
+                                        <span><i class="fa-regular fa-calendar-days"></i> 10 أغسطس 2026</span>
+                                        <span><i class="fa-regular fa-clock"></i> 5 دقائق</span>
+                                    </div>
+                                    <h3 class="news-card__title">
+                                        <a href="#">تكريم 50 طالبًا وطالبة من المتفوقين في مدرسة المشاوز للتعليم الأساسي</a>
+                                    </h3>
+                                    <p class="news-card__excerpt">
+                                        نظم صندوق المشاوز حفل تكريم سنوي للمبدعين والمتفوقين تحفيزاً لطاقات الشباب ودعماً للمسيرة التعليمية في القرية.
+                                    </p>
+                                    <div class="news-card__footer">
+                                        <a href="#" class="news-card__link">
+                                            اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
+                                        </a>
+                                        <div class="news-card__actions">
+                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
+                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- News Card 3 -->
+                            <article class="news-card" data-category="solidarity">
+                                <div class="news-card__image-wrap">
+                                    <img src="images/news_solidarity.png" alt="توزيع السلال الغذائية">
+                                    <div class="news-card__badge">
+                                        <span class="news-badge news-badge--solidarity">مبادرة تكافلية</span>
+                                    </div>
+                                </div>
+                                <div class="news-card__body">
+                                    <div class="news-card__meta">
+                                        <span><i class="fa-regular fa-calendar-days"></i> 05 أغسطس 2026</span>
+                                        <span><i class="fa-regular fa-clock"></i> 3 دقائق</span>
+                                    </div>
+                                    <h3 class="news-card__title">
+                                        <a href="#">توزيع السلال الغذائية لـ 120 أسرة ضمن برنامج التكافل الاجتماعي الموسمي</a>
+                                    </h3>
+                                    <p class="news-card__excerpt">
+                                        استكملت اللجنة الاجتماعية توزيع المساعدات والمستلزمات الأساسية للأسر المتعففة وكبار السن في محلات ومناطق القرية.
+                                    </p>
+                                    <div class="news-card__footer">
+                                        <a href="#" class="news-card__link">
+                                            اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
+                                        </a>
+                                        <div class="news-card__actions">
+                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
+                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- News Card 4 -->
+                            <article class="news-card" data-category="village">
+                                <div class="news-card__image-wrap">
+                                    <img src="images/news_health.png" alt="القافلة الطبية المجانية">
+                                    <div class="news-card__badge">
+                                        <span class="news-badge">صحة ومجتمع</span>
+                                    </div>
+                                </div>
+                                <div class="news-card__body">
+                                    <div class="news-card__meta">
+                                        <span><i class="fa-regular fa-calendar-days"></i> 28 يوليو 2026</span>
+                                        <span><i class="fa-regular fa-clock"></i> 4 دقائق</span>
+                                    </div>
+                                    <h3 class="news-card__title">
+                                        <a href="#">انطلاق القافلة الطبية المجانية لتقديم الرعاية الصحية والفحوصات بمركز القرية</a>
+                                    </h3>
+                                    <p class="news-card__excerpt">
+                                        استفاد أكثر من 280 مواطناً من المعاينات الطبية والأدوية المجانية التي قدمتها الكوادر الطبية التطوعية من أبناء القرية.
+                                    </p>
+                                    <div class="news-card__footer">
+                                        <a href="#" class="news-card__link">
+                                            اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
+                                        </a>
+                                        <div class="news-card__actions">
+                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
+                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- News Card 5 -->
+                            <article class="news-card" data-category="reports">
+                                <div class="news-card__image-wrap">
+                                    <img src="images/hero_bg.png" alt="التقرير المالي والإداري">
+                                    <div class="news-card__badge">
+                                        <span class="news-badge news-badge--report">تقارير وحوكمة</span>
+                                    </div>
+                                </div>
+                                <div class="news-card__body">
+                                    <div class="news-card__meta">
+                                        <span><i class="fa-regular fa-calendar-days"></i> 20 يوليو 2026</span>
+                                        <span><i class="fa-regular fa-clock"></i> 6 دقائق</span>
+                                    </div>
+                                    <h3 class="news-card__title">
+                                        <a href="#">اعتماد التقرير المالي والإداري للنصف الأول لعام 2026م بشفافية كاملة</a>
+                                    </h3>
+                                    <p class="news-card__excerpt">
+                                        نشرت هيئة الرقابة والتفتيش التقرير نصف السنوي الذي يوضح الإيرادات والمصروفات ونسب إنجاز المشاريع المعتمدة بكل شفافية.
+                                    </p>
+                                    <div class="news-card__footer">
+                                        <a href="#" class="news-card__link">
+                                            اقرأ التقرير <i class="fa-solid fa-chevron-left"></i>
+                                        </a>
+                                        <div class="news-card__actions">
+                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
+                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- News Card 6 -->
+                            <article class="news-card" data-category="development">
+                                <div class="news-card__image-wrap">
+                                    <img src="images/news_featured.png" alt="صيانة خزانات المياه">
+                                    <div class="news-card__badge">
+                                        <span class="news-badge">بنية تحتية</span>
+                                    </div>
+                                </div>
+                                <div class="news-card__body">
+                                    <div class="news-card__meta">
+                                        <span><i class="fa-regular fa-calendar-days"></i> 12 يوليو 2026</span>
+                                        <span><i class="fa-regular fa-clock"></i> 3 دقائق</span>
+                                    </div>
+                                    <h3 class="news-card__title">
+                                        <a href="#">بدء أعمال الصيانة الدورية لخزانات المياه العامة استعداداً لموسم الأمطار</a>
+                                    </h3>
+                                    <p class="news-card__excerpt">
+                                        إنهاء المرحلة الأولى من تنظيف وتعقيم الخزانات الرئيسية وإصلاح التشققات لضمان حفظ وتخزين مياه الأمطار بكفاءة عالية.
+                                    </p>
+                                    <div class="news-card__footer">
+                                        <a href="#" class="news-card__link">
+                                            اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
+                                        </a>
+                                        <div class="news-card__actions">
+                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
+                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <!-- Pagination Nav -->
+                        <div class="pagination">
+                            <a href="#" class="pagination__item" aria-label="الصفحة السابقة"><i class="fa-solid fa-chevron-right"></i></a>
+                            <a href="#" class="pagination__item active">1</a>
+                            <a href="#" class="pagination__item">2</a>
+                            <a href="#" class="pagination__item">3</a>
+                            <a href="#" class="pagination__item" aria-label="الصفحة التالية"><i class="fa-solid fa-chevron-left"></i></a>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Sidebar Widgets -->
+                    <aside class="sidebar">
+
+                        <!-- Widget 1: Search Box -->
+                        <div class="widget widget-search">
+                            <h3 class="widget__title">البحث في الأخبار</h3>
+                            <form class="widget-search__form" onsubmit="return false;">
+                                <input type="text" class="widget-search__input" id="sidebarSearchInput" placeholder="أدخل كلمة البحث...">
+                                <button type="button" class="widget-search__btn" id="sidebarSearchBtn">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Widget 2: Popular Articles -->
+                        <div class="widget">
+                            <h3 class="widget__title">الأكثر قراءة</h3>
+                            <div class="popular-news-list">
+                                <article class="popular-item">
+                                    <div class="popular-item__image">
+                                        <img src="images/news_featured.png" alt="مصخات الطاقة">
+                                    </div>
+                                    <div class="popular-item__content">
+                                        <span class="popular-item__date"><i class="fa-regular fa-eye"></i> 1.4k مشاهدة</span>
+                                        <h4 class="popular-item__title">
+                                            <a href="#">تدشين مشروع منظومة الضخ الشمسية للمياه</a>
+                                        </h4>
+                                    </div>
+                                </article>
+
+                                <article class="popular-item">
+                                    <div class="popular-item__image">
+                                        <img src="images/news_road.png" alt="مشروع الطريق">
+                                    </div>
+                                    <div class="popular-item__content">
+                                        <span class="popular-item__date"><i class="fa-regular fa-eye"></i> 980 مشاهدة</span>
+                                        <h4 class="popular-item__title">
+                                            <a href="#">إنجاز 80% من رصف طريق عقبة المشاوز</a>
+                                        </h4>
+                                    </div>
+                                </article>
+
+                                <article class="popular-item">
+                                    <div class="popular-item__image">
+                                        <img src="images/news_school.png" alt="تكريم المتفوقين">
+                                    </div>
+                                    <div class="popular-item__content">
+                                        <span class="popular-item__date"><i class="fa-regular fa-eye"></i> 850 مشاهدة</span>
+                                        <h4 class="popular-item__title">
+                                            <a href="#">تكريم الطلاب المتفوقين بمدرسة المشاوز</a>
+                                        </h4>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Widget 3: Categories List -->
+                        <div class="widget">
+                            <h3 class="widget__title">أقسام الأخبار</h3>
+                            <ul class="categories-list">
+                                <li class="categories-list__item">
+                                    <a href="#" data-filter="development">
+                                        <span><i class="fa-solid fa-hammer text-primary"></i> المشاريع التنموية</span>
+                                        <span class="categories-list__count">14</span>
+                                    </a>
+                                </li>
+                                <li class="categories-list__item">
+                                    <a href="#" data-filter="solidarity">
+                                        <span><i class="fa-solid fa-hand-holding-heart"></i> المبادرات التكافلية</span>
+                                        <span class="categories-list__count">9</span>
+                                    </a>
+                                </li>
+                                <li class="categories-list__item">
+                                    <a href="#" data-filter="village">
+                                        <span><i class="fa-solid fa-users"></i> أخبار وفعاليات القرية</span>
+                                        <span class="categories-list__count">12</span>
+                                    </a>
+                                </li>
+                                <li class="categories-list__item">
+                                    <a href="#" data-filter="reports">
+                                        <span><i class="fa-solid fa-file-contract"></i> التقارير والحوكمة</span>
+                                        <span class="categories-list__count">6</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Widget 4: Newsletter -->
+                        <div class="widget widget-newsletter">
+                            <h3 class="widget__title">النشرة الإخبارية</h3>
+                            <p>اشترك معنا ليصلك جديد أخبار ومشاريع قرية المشاوز عبر الواتساب أو البريد.</p>
+                            <form class="newsletter-form" id="newsletterForm" onsubmit="alert('تم الاشتراك بنجاح في نشرة أخبار المشاوز!'); return false;">
+                                <input type="text" class="newsletter-input" placeholder="اسمك الكريم..." required>
+                                <input type="text" class="newsletter-input" placeholder="رقم الواتساب أو البريد..." required>
+                                <button type="submit" class="btn btn--accent" style="width: 100%;">
+                                    <i class="fa-solid fa-paper-plane"></i> اشترك الآن
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Widget 5: Tags Cloud -->
+                        <div class="widget">
+                            <h3 class="widget__title">وسوم شائعة</h3>
+                            <div class="tags-cloud">
+                                <a href="#" class="tag-item">#قرية_المشاوز</a>
+                                <a href="#" class="tag-item">#طاقة_شمسية</a>
+                                <a href="#" class="tag-item">#مشروع_المياه</a>
+                                <a href="#" class="tag-item">#تعليم</a>
+                                <a href="#" class="tag-item">#رصف_الطرق</a>
+                                <a href="#" class="tag-item">#تكافل_اجتماعي</a>
+                                <a href="#" class="tag-item">#تقرير_مالي</a>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             MEDIA & VIDEO HIGHLIGHTS
+        ====================================================== -->
+        <section class="news-media-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-heading__label">المكتبة المرئية</span>
+                    <h2 class="section-heading__title">تغطيات مصورة وفيديوهات</h2>
+                    <p class="section-heading__description">شاهد التغطيات التوثيقية بالصوت والصورة لأبرز مشاريع وأنشطة القرية.</p>
+                </div>
+
+                <div class="media-grid">
+                    <div class="media-card">
+                        <img src="images/news_featured.png" alt="فيديو تشغيل مشروع المياه">
+                        <div class="media-card__overlay">
+                            <a href="#" class="media-card__play-btn" title="تشغيل الفيديو"><i class="fa-solid fa-play"></i></a>
+                            <h3 class="media-card__title">فيديو: لحظات تشغيل مضخات المياه بالطاقة الشمسية</h3>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <img src="images/news_road.png" alt="فيديو رصف الطريق">
+                        <div class="media-card__overlay">
+                            <a href="#" class="media-card__play-btn" title="تشغيل الفيديو"><i class="fa-solid fa-play"></i></a>
+                            <h3 class="media-card__title">وثائقي قصير: جهود أبناء القرية في رصف العقبة</h3>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <img src="images/news_school.png" alt="معرض صور تكريم الطلاب">
+                        <div class="media-card__overlay">
+                            <a href="#" class="media-card__play-btn" title="عرض الألبوم"><i class="fa-solid fa-images"></i></a>
+                            <h3 class="media-card__title">ألبوم صور: حفل تكريم الطلاب المتفوقين لعام 2026</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             CALL TO ACTION BANNER
+        ====================================================== -->
+        <div class="container">
+            <section class="news-cta-banner">
+                <h2>هل لديك خبر أو مبادرة تود مشاركتها؟</h2>
+                <p>اللجنة الإعلامية لصندوق المشاوز ترحب دائماً بمساهمات أبناء القرية وتغطية مبادراتهم المجتمعية.</p>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn--accent">
+                        <i class="fa-solid fa-envelope"></i> تواصل مع اللجنة الإعلامية
+                    </a>
+                    <a href="contribute.html" class="btn btn--outline" style="color: white; border-color: white;">
+                        <i class="fa-solid fa-hand-holding-heart"></i> تقديم دعم لمشروع
+                    </a>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="site-footer__grid">
+
+                <!-- Footer About -->
+                <div class="site-footer__about">
+                    <a href="../-/Index/index.html" class="site-footer__logo">
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #4CAF50, #2E7D32); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1.2rem;">
+                                <i class="fa-solid fa-hands-holding-child"></i>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="font-weight: 800; font-size: 1.1rem; color: #FFFFFF; line-height: 1.2;">صندوق المشاوز</span>
+                                <span style="font-size: 0.75rem; color: rgba(250, 250, 250, 0.7); font-weight: 600;">التكافلي التنموي</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p>
+                        صندوق مجتمعي يهدف إلى دعم التنمية المستدامة والتكافل الاجتماعي في قرية المشاوز بمحافظة تعز، اليمن.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="site-footer__links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="../-/Index/index.html">الرئيسية</a></li>
+                        <li><a href="about.html">عن الصندوق</a></li>
+                        <li><a href="village.html">عن قرية المشاوز</a></li>
+                        <li><a href="projects.html">المشاريع التنموية</a></li>
+                        <li><a href="solidarity.html">المشاريع التكافلية</a></li>
+                        <li><a href="news.html">أخبار القرية</a></li>
+                        <li><a href="governance.html">الحوكمة</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="site-footer__contact">
+                    <h3>تواصل معنا</h3>
+                    <address>
+                        <p>
+                            <strong>الهاتف:</strong>
+                            <a href="tel:780810312">780810312</a>
+                        </p>
+                        <p>
+                            <strong>البريد الإلكتروني:</strong>
+                            <a href="mailto:info@mashawizfund.org">info@mashawizfund.org</a>
+                        </p>
+                        <p>
+                            <strong>العنوان:</strong>
+                            قرية المشاوز، محافظة تعز، اليمن
+                        </p>
+                    </address>
+                </div>
+
+                <!-- Social Media -->
+                <div class="site-footer__social">
+                    <h3>تابعنا على</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="فيسبوك"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                        <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i> X</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="site-footer__bottom">
+                <p>
+                    جميع الحقوق محفوظة © 2026 صندوق المشاوز التكافلي التنموي
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- =====================================================
+         LIGHTWEIGHT INTERACTIVE JAVASCRIPT
+    ====================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle
+            const menuToggleBtn = document.getElementById('menuToggleBtn');
+            const mainNav = document.getElementById('mainNav');
+
+            if (menuToggleBtn && mainNav) {
+                menuToggleBtn.addEventListener('click', function () {
+                    mainNav.classList.toggle('is-open');
+                });
+            }
+
+            // Dropdown Menu Toggle for Mobile
+            const projectsDropdown = document.getElementById('projectsDropdown');
+            if (projectsDropdown) {
+                projectsDropdown.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 992) {
+                        this.classList.toggle('is-open');
+                    }
+                });
+            }
+
+            // Category Filtering Logic
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const newsCards = document.querySelectorAll('.news-card');
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remove active from all tabs
+                    tabButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-category');
+
+                    newsCards.forEach(card => {
+                        const cardCat = card.getAttribute('data-category');
+                        if (category === 'all' || cardCat === category) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Live Search Logic (Hero Search & Sidebar Search)
+            function performSearch(query) {
+                const q = query.trim().toLowerCase();
+                newsCards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if (q === '' || text.includes(q)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            const heroSearchInput = document.getElementById('heroSearchInput');
+            const heroSearchBtn = document.getElementById('heroSearchBtn');
+            if (heroSearchInput) {
+                heroSearchInput.addEventListener('input', e => performSearch(e.target.value));
+            }
+            if (heroSearchBtn && heroSearchInput) {
+                heroSearchBtn.addEventListener('click', () => performSearch(heroSearchInput.value));
+            }
+
+            const sidebarSearchInput = document.getElementById('sidebarSearchInput');
+            const sidebarSearchBtn = document.getElementById('sidebarSearchBtn');
+            if (sidebarSearchInput) {
+                sidebarSearchInput.addEventListener('input', e => performSearch(e.target.value));
+            }
+            if (sidebarSearchBtn && sidebarSearchInput) {
+                sidebarSearchBtn.addEventListener('click', () => performSearch(sidebarSearchInput.value));
+            }
+
+            // Bookmark Toggle Feedback
+            document.querySelectorAll('.icon-btn').forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('fa-bookmark')) {
+                        icon.classList.toggle('fa-regular');
+                        icon.classList.toggle('fa-solid');
+                        if (icon.classList.contains('fa-solid')) {
+                            this.style.color = '#2E7D32';
+                        } else {
+                            this.style.color = '';
+                        }
+                    } else if (icon.classList.contains('fa-share-nodes')) {
+                        alert('تم نسخ رابط الخبر للحافظة بنجاح!');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
