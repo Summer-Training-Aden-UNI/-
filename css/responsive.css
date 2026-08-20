@@ -1,0 +1,288 @@
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    /* Header */
+    .site-header > .container {
+        gap: 1rem;
+    }
+
+    .site-header__nav-item > a {
+        padding-inline: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .site-footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Team */
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    :root {
+        --section-padding: 4rem 0;
+    }
+
+
+    /* Header */
+
+    .site-header > .container {
+        min-height: 70px;
+    }
+
+    .site-header__logo img {
+        height: 50px;
+    }
+
+    .site-header__nav {
+        display: none;
+    }
+
+    .site-header__menu-toggle {
+        display: block;
+
+        order: 2;
+    }
+
+    .site-header > .container > .btn {
+        margin-right: auto;
+        order: 1;
+    }
+
+    .site-header__logo {
+        order: 3;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .hero__content {
+        max-width: 650px;
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .hero__actions {
+        justify-content: center;
+    }
+
+
+    /* Statistics */
+
+    .statistics__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* Projects */
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Team */
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Village */
+
+    .village-preview__content {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+
+    .village-preview__text {
+        text-align: center;
+    }
+
+
+    /* News */
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    :root {
+        --section-padding: 3.5rem 0;
+    }
+
+
+    /* Container */
+
+    .container {
+        width: min(100% - 1.5rem, var(--container-width));
+    }
+
+
+    /* Typography */
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+
+    /* Header */
+
+    .site-header > .container {
+        gap: 0.75rem;
+    }
+
+    .site-header__logo img {
+        height: 45px;
+    }
+
+    .site-header > .container > .btn {
+        min-height: 42px;
+        padding: 0.6rem 0.9rem;
+
+        font-size: 0.85rem;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero__content {
+        padding: 4rem 0;
+    }
+
+    .hero__title {
+        font-size: 2.4rem;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+
+    /* Section Heading */
+
+    .section-heading {
+        margin-bottom: 2rem;
+    }
+
+
+    /* Statistics */
+
+    .statistics__grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Projects */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Team */
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-card {
+        padding: 1rem;
+    }
+
+    .team-card__image {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    /* News */
+
+    .news-card {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card__image {
+        aspect-ratio: 16 / 9;
+    }
+
+
+    /* Village */
+
+    .village-preview__content {
+        gap: 1.5rem;
+    }
+
+
+    /* Footer */
+
+    .site-footer__grid {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+        padding: 3rem 0;
+    }
+
+    .site-footer__about p {
+        max-width: none;
+    }
+
+    .site-footer__bottom {
+        padding: 1rem 0;
+    }
+
+}
