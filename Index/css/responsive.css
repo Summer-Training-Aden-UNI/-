@@ -1,891 +1,890 @@
-/* =========================================================
-   RESPONSIVE DESIGN
-   صندوق المشاوز التكافلي التنموي
-   ========================================================= */
-
-
-/* =========================================================
-   LARGE TABLETS / SMALL DESKTOP
-   1100px
-   ========================================================= */
-
 @media (max-width: 1100px) {
-
+ 
     /* -----------------------------------------------------
        GLOBAL
        ----------------------------------------------------- */
-
+ 
     .container {
         width: min(
             calc(100% - 32px),
             var(--container-width)
         );
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        HEADER
        ----------------------------------------------------- */
-
+ 
     .site-header > .container {
         gap: 1rem;
     }
-
+ 
     .site-header__nav-item > a {
         padding-inline: 0.5rem;
         font-size: 0.9rem;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        FOOTER
        ----------------------------------------------------- */
-
+ 
     .site-footer__grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        TEAM
        ----------------------------------------------------- */
-
+ 
     .team-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        GOVERNANCE
        ----------------------------------------------------- */
-
+ 
     .governance-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
+ 
     .governance-grid .info-card:last-child {
         grid-column: 1 / -1;
     }
-
-
+ 
+ 
     .principles-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
+ 
 }
-
-
+ 
+ 
 /* =========================================================
    TABLETS
    900px
    ========================================================= */
-
+ 
 @media (max-width: 900px) {
-
-    :root {
-        --heading-xl: 2.6rem;
-        --heading-lg: 2.1rem;
-        --heading-md: 1.6rem;
-
-        --space-4xl: 64px;
-    }
-
-
-    /* -----------------------------------------------------
-       HEADER
-       ----------------------------------------------------- */
-
-    .site-header > .container {
-        min-height: 70px;
-
-        position: relative;
-
-        display: flex;
-        align-items: center;
-    }
-
-
-    .site-header__logo img {
-        height: 50px;
-        width: auto;
-    }
-
-
-    /*
-       Hide desktop navigation
-    */
-
-    .site-header__nav {
-        display: none;
-    }
-
-
-    /*
-       Hamburger button
-    */
-
+ 
     .site-header__menu-toggle {
         display: flex;
-
+        flex-direction: column;      /* stacks the 3 bars vertically */
         align-items: center;
         justify-content: center;
-
+ 
         width: 44px;
         height: 44px;
-
+ 
         padding: 0;
-
-        margin-inline-start: auto;
-
+ 
         border: 0;
         border-radius: var(--radius-sm);
-
+ 
         background: transparent;
-
+ 
         cursor: pointer;
+ 
+        order: 3;                    /* pinned to the far end */
+        margin-inline-start: auto;   /* pushes it away from the logo, to the left */
     }
-
-
-    /*
-       If the hamburger uses spans
-    */
-
+ 
     .site-header__menu-toggle span {
         display: block;
-
+ 
         width: 24px;
         height: 2px;
-
-        margin: 5px 0;
-
+ 
+        margin: 3px 0;
+ 
         background-color: var(--text-dark);
-
+        border-radius: 2px;
+ 
         transition:
             transform 0.25s ease,
             opacity 0.25s ease;
     }
-
-
+ 
+    :root {
+        --heading-xl: 2.6rem;
+        --heading-lg: 2.1rem;
+        --heading-md: 1.6rem;
+ 
+        --space-4xl: 64px;
+    }
+ 
+ 
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+ 
+    .site-header > .container {
+        min-height: 70px;
+ 
+        position: relative;
+ 
+        display: flex;
+        align-items: center;
+    }
+ 
+ 
+    .site-header__logo img {
+        height: 50px;
+        width: auto;
+    }
+ 
+ 
+    /*
+       Hide desktop navigation
+    */
+ 
+    .site-header__nav {
+        display: none;
+    }
+ 
+ 
     /*
        Mobile navigation container
-
-       This works if your HTML uses:
-
-       <nav class="site-header__nav">
-           ...
-       </nav>
-
-       and the menu is opened through a checkbox/class.
+ 
+       Opens when JS adds the "is-open" class to
+       <nav class="site-header__nav"> on hamburger click.
     */
-
+ 
     .site-header__nav.is-open {
         display: flex;
-
+ 
         position: absolute;
-
+ 
         top: 100%;
         right: 0;
         left: 0;
-
+ 
         z-index: 1000;
-
+ 
         flex-direction: column;
-
+ 
         width: 100%;
-
+ 
         padding: 1rem;
-
-        background-color: var(--bg-white);
-
-        border-top: 1px solid var(--border-light);
-
+ 
+        background-color: var(--white);
+ 
+        border-top: 1px solid var(--border-color);
+ 
         box-shadow: var(--shadow-md);
     }
-
-
+ 
+ 
+    .site-header__nav.is-open .site-header__nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+ 
+        gap: 0.25rem;
+    }
+ 
     .site-header__nav.is-open .site-header__nav-item {
         width: 100%;
     }
-
-
+ 
+ 
     .site-header__nav.is-open .site-header__nav-item > a {
         display: flex;
-
+ 
         align-items: center;
-
+ 
         width: 100%;
-
+ 
         padding: 0.85rem 1rem;
-
+ 
         border-radius: var(--radius-sm);
     }
-
-
+ 
+ 
     .site-header__nav.is-open .site-header__nav-item > a:hover {
         background-color: var(--bg-light);
-
+ 
         color: var(--primary-color);
     }
-
-
+ 
+ 
+    /*
+       Dropdown ("المشاريع") inside the mobile menu.
+       Desktop relies on :hover, which doesn't exist on touch
+       devices, so the submenu is force-expanded inline instead.
+    */
+ 
+    .site-header__nav.is-open .site-header__dropdown {
+        position: static;
+ 
+        margin-top: 0.25rem;
+        margin-bottom: 0.5rem;
+        padding: 0 0 0 1rem;
+ 
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+ 
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+ 
+ 
     /*
        Mobile CTA
     */
-
+ 
     .site-header > .container > .btn {
         order: 2;
-
-        margin-inline-start: 0;
     }
-
-
-    .site-header__menu-toggle {
-        order: 1;
-    }
-
-
+ 
     .site-header__logo {
-        order: 3;
+        order: 1;                    /* logo sits at the RTL start (right) */
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        PAGE HERO
        ----------------------------------------------------- */
-
+ 
     .page-hero {
         padding-block: 70px;
     }
-
-
+ 
+ 
     .page-hero__title {
         font-size: 2.6rem;
     }
-
-
+ 
+ 
     .page-hero__description {
         max-width: 650px;
-
+ 
         font-size: 1.05rem;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        GENERAL SECTIONS
        ----------------------------------------------------- */
-
+ 
     .section {
         padding-block: var(--space-4xl);
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        GOVERNANCE CARDS
        ----------------------------------------------------- */
-
+ 
     .governance-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        STRUCTURE
        ----------------------------------------------------- */
-
+ 
     .structure {
         max-width: 720px;
     }
-
-
+ 
+ 
     .structure__children {
         grid-template-columns: 1fr 1fr;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        PRINCIPLES
        ----------------------------------------------------- */
-
+ 
     .principles-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        CTA
        ----------------------------------------------------- */
-
+ 
     .cta-box {
         padding: var(--space-2xl);
-
+ 
         flex-direction: column;
-
+ 
         align-items: flex-start;
     }
-
-
+ 
+ 
     .cta-box__action {
         width: 100%;
     }
-
-
+ 
+ 
     .cta-box__action .button {
         width: auto;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        HERO
        ----------------------------------------------------- */
-
+ 
     .hero {
         min-height: 580px;
     }
-
-
+ 
+ 
     .hero__content {
         max-width: 650px;
-
+ 
         margin-inline: auto;
-
+ 
         text-align: center;
     }
-
-
+ 
+ 
     .hero__actions {
         justify-content: center;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        STATISTICS
        ----------------------------------------------------- */
-
+ 
     .statistics__grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        PROJECTS
        ----------------------------------------------------- */
-
+ 
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        TEAM
        ----------------------------------------------------- */
-
+ 
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        VILLAGE
        ----------------------------------------------------- */
-
+ 
     .village-preview__content {
         grid-template-columns: 1fr;
-
+ 
         gap: 2rem;
     }
-
-
+ 
+ 
     .village-preview__text {
         text-align: center;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        NEWS
        ----------------------------------------------------- */
-
+ 
     .news-grid {
         grid-template-columns: 1fr;
     }
-
+ 
 }
-
-
+ 
+ 
 /* =========================================================
    MOBILE
    600px
    ========================================================= */
-
+ 
 @media (max-width: 600px) {
-
+ 
     :root {
         --heading-xl: 2.2rem;
         --heading-lg: 1.85rem;
         --heading-md: 1.45rem;
-
+ 
         --space-4xl: 52px;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        GLOBAL CONTAINER
        ----------------------------------------------------- */
-
+ 
     .container {
         width: calc(100% - 32px);
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        TYPOGRAPHY
        ----------------------------------------------------- */
-
+ 
     h1 {
         font-size: 2.2rem;
     }
-
-
+ 
+ 
     h2 {
         font-size: 1.85rem;
     }
-
-
+ 
+ 
     h3 {
         font-size: 1.35rem;
     }
-
-
+ 
+ 
     body {
         font-size: 0.98rem;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        HEADER
        ----------------------------------------------------- */
-
+ 
     .site-header > .container {
         min-height: 64px;
-
+ 
         gap: 0.5rem;
     }
-
-
+ 
+ 
     .site-header__logo img {
         height: 42px;
     }
-
-
+ 
+ 
     /*
        Hide CTA on very small screens.
-
+ 
        The CTA remains available inside the mobile menu.
     */
-
+ 
     .site-header > .container > .btn {
         display: none;
     }
-
-
+ 
+ 
     .site-header__menu-toggle {
         width: 42px;
         height: 42px;
-
+ 
         flex-shrink: 0;
     }
-
-
+ 
+ 
     /*
        Full-width mobile menu
     */
-
+ 
     .site-header__nav.is-open {
         right: 0;
         left: 0;
-
+ 
         width: 100%;
-
+ 
         padding: 0.75rem 1rem;
     }
-
-
+ 
+ 
     .site-header__nav.is-open .site-header__nav-item > a {
         padding: 0.8rem;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        PAGE HERO
        ----------------------------------------------------- */
-
+ 
     .page-hero {
         padding-block: 55px;
     }
-
-
+ 
+ 
     .page-hero__title {
         margin-top: 10px;
-
+ 
         font-size: 2.2rem;
-
+ 
         line-height: 1.35;
     }
-
-
+ 
+ 
     .page-hero__description {
         margin-top: 16px;
-
+ 
         font-size: 0.98rem;
-
+ 
         line-height: 1.9;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        SECTION
        ----------------------------------------------------- */
-
+ 
     .section {
         padding-block: 52px;
     }
-
-
+ 
+ 
     .section-heading {
         margin-bottom: 32px;
     }
-
-
+ 
+ 
     .section-heading__title {
         margin-bottom: 14px;
     }
-
-
+ 
+ 
     .section-heading__description {
         font-size: 1rem;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        GOVERNANCE INTRO
        ----------------------------------------------------- */
-
+ 
     .governance-grid {
         grid-template-columns: 1fr;
-
+ 
         gap: 16px;
     }
-
-
+ 
+ 
     .governance-grid .info-card:last-child {
         grid-column: auto;
     }
-
-
+ 
+ 
     .info-card {
         padding: 24px;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        STRUCTURE
        ----------------------------------------------------- */
-
+ 
     .structure {
         width: 100%;
     }
-
-
+ 
+ 
     .structure-card {
         padding: 24px;
     }
-
-
+ 
+ 
     .structure__line {
         height: 32px;
     }
-
-
+ 
+ 
     .structure__children {
         grid-template-columns: 1fr;
-
+ 
         gap: 16px;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        PRINCIPLES
        ----------------------------------------------------- */
-
+ 
     .principles-grid {
         grid-template-columns: 1fr;
-
+ 
         gap: 16px;
     }
-
-
+ 
+ 
     .principle-card {
         min-height: auto;
-
+ 
         padding: 24px;
     }
-
-
+ 
+ 
     .principle-card__number {
         margin-bottom: 20px;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        POLICIES
        ----------------------------------------------------- */
-
+ 
     .policy-list {
         gap: 14px;
     }
-
-
+ 
+ 
     .policy-item {
         flex-direction: column;
-
+ 
         gap: 16px;
-
+ 
         padding: 22px;
     }
-
-
+ 
+ 
     .policy-item__number {
         width: 44px;
         height: 44px;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        CTA
        ----------------------------------------------------- */
-
+ 
     .governance-cta {
         padding-top: 0;
     }
-
-
+ 
+ 
     .cta-box {
         padding: 32px 24px;
-
+ 
         border-radius: var(--radius-md);
     }
-
-
+ 
+ 
     .cta-box__title {
         font-size: 1.5rem;
     }
-
-
+ 
+ 
     .cta-box__text {
         font-size: 0.95rem;
     }
-
-
+ 
+ 
     .cta-box__action,
     .cta-box__action .button {
         width: 100%;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        BUTTONS
        ----------------------------------------------------- */
-
+ 
     .button {
         min-height: 46px;
-
+ 
         padding: 11px 20px;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        HERO
        ----------------------------------------------------- */
-
+ 
     .hero {
         min-height: 600px;
     }
-
-
+ 
+ 
     .hero__content {
         padding: 4rem 0;
     }
-
-
+ 
+ 
     .hero__title {
         font-size: 2.35rem;
     }
-
-
+ 
+ 
     .hero__description {
         font-size: 1rem;
     }
-
-
+ 
+ 
     .hero__actions {
         flex-direction: column;
-
+ 
         align-items: stretch;
     }
-
-
+ 
+ 
     .hero__actions .btn {
         width: 100%;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        STATISTICS
        ----------------------------------------------------- */
-
+ 
     .statistics__grid {
         grid-template-columns: 1fr;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        PROJECTS
        ----------------------------------------------------- */
-
+ 
     .projects-grid {
         grid-template-columns: 1fr;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        TEAM
        ----------------------------------------------------- */
-
+ 
     .team-grid {
         grid-template-columns: 1fr 1fr;
     }
-
-
+ 
+ 
     .team-card {
         padding: 1rem;
     }
-
-
+ 
+ 
     .team-card__image {
         width: 90px;
         height: 90px;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        NEWS
        ----------------------------------------------------- */
-
+ 
     .news-card {
         grid-template-columns: 1fr;
     }
-
-
+ 
+ 
     .news-card__image {
         aspect-ratio: 16 / 9;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        VILLAGE
        ----------------------------------------------------- */
-
+ 
     .village-preview__content {
         gap: 1.5rem;
     }
-
-
+ 
+ 
     /* -----------------------------------------------------
        FOOTER
        ----------------------------------------------------- */
-
+ 
     .site-footer__grid {
         grid-template-columns: 1fr;
-
+ 
         gap: 2rem;
-
+ 
         padding: 3rem 0;
     }
-
-
+ 
+ 
     .site-footer__about p {
         max-width: none;
     }
-
-
+ 
+ 
     .site-footer__bottom {
         padding: 1rem 0;
     }
-
+ 
 }
-
-
+ 
+ 
 /* =========================================================
    VERY SMALL MOBILE
    420px
    ========================================================= */
-
+ 
 @media (max-width: 420px) {
-
+ 
     .container {
         width: calc(100% - 24px);
     }
-
-
+ 
+ 
     .site-header__logo img {
         height: 38px;
     }
-
-
+ 
+ 
     .site-header__menu-toggle {
         width: 40px;
         height: 40px;
     }
-
-
+ 
+ 
     .page-hero {
         padding-block: 45px;
     }
-
-
+ 
+ 
     .page-hero__title {
         font-size: 2rem;
     }
-
-
+ 
+ 
     .page-hero__description {
         font-size: 0.95rem;
     }
-
-
+ 
+ 
     .section {
         padding-block: 44px;
     }
-
-
+ 
+ 
     .info-card,
     .principle-card,
     .structure-card {
         padding: 20px;
     }
-
-
+ 
+ 
     .cta-box {
         padding: 28px 20px;
     }
-
-
+ 
+ 
     .cta-box__title {
         font-size: 1.35rem;
     }
-
-
+ 
+ 
     .team-grid {
         grid-template-columns: 1fr;
     }
-
+ 
 }
