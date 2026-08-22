@@ -106,3 +106,45 @@
 .hero__actions .btn--secondary {
     border: 2px solid rgba(255, 255, 255, 0.5);
 }
+
+
+/* =========================================================
+   PAGE HERO
+   Shorter banner for inner pages (About, Team, News,
+   Governance, Village, Contact...) — no background photo,
+   just a solid dark band. Breakpoint overrides already
+   exist in responsive.css.
+========================================================= */
+
+.page-hero {
+    padding-block: 120px;
+
+    text-align: center;
+
+    color: var(--white);
+    background-color: var(--bg-dark);
+}
+
+.page-hero__label {
+    display: inline-block;
+
+    margin-bottom: 0.75rem;
+
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.page-hero__title {
+    margin-bottom: 1rem;
+
+    color: var(--white);
+    font-size: clamp(2.5rem, 5vw, 3rem);
+}
+
+.page-hero__description {
+    max-width: 700px;
+    margin-inline: auto;
+
+    color: rgba(250, 250, 250, 0.85);
+    font-size: 1.1rem;
+}

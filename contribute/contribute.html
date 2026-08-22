@@ -5,102 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="ساهم معنا في دعم صندوق المشاوز التكافلي التنموي."
-    >
-
     <title>ساهم معنا | صندوق المشاوز التكافلي التنموي</title>
 
     <!-- Google Fonts -->
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../contribute/main.css">
+    <!-- Shared Stylesheets from Index/css -->
+    <link rel="stylesheet" href="../Index/css/main.css">
     <link rel="stylesheet" href="../Index/css/header.css">
     <link rel="stylesheet" href="../Index/css/footer.css">
+    <link rel="stylesheet" href="../Index/css/hero.css">
+    <link rel="stylesheet" href="../Index/css/cards.css">
     <link rel="stylesheet" href="../Index/css/responsive.css">
 </head>
 
 <body>
 
     <!-- =====================================================
-         HEADER
+         HEADER / NAVBAR
+         Shared across all pages
     ====================================================== -->
-
     <header class="site-header">
 
         <div class="container">
 
             <!-- Logo -->
-            <a
-                href="index.html"
-                class="site-header__logo"
-                aria-label="العودة إلى الصفحة الرئيسية"
-            >
-                <img
-                    src="../Images/logo.png"
-                    alt="صندوق المشاوز التكافلي التنموي"
-                >
+            <a href="../Index/index.html" class="site-header__logo">
+                <img src="../Images/logo.png" alt="شعار صندوق المشاوز التكافلي التنموي">
             </a>
 
-            <!-- Navigation -->
-            <nav
-                class="site-header__nav"
-                aria-label="التنقل الرئيسي"
-            >
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="menu-toggle" class="site-header__menu-checkbox" aria-label="فتح القائمة">
+            <label for="menu-toggle" class="site-header__menu-toggle" aria-label="فتح القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Main Navigation -->
+            <nav class="site-header__nav" aria-label="القائمة الرئيسية">
 
                 <ul class="site-header__nav-list">
 
                     <li class="site-header__nav-item">
-                        <a href="index.html">
-                            الرئيسية
-                        </a>
+                        <a href="../Index/index.html">الرئيسية</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="about.html">
-                            عن الصندوق
-                        </a>
+                        <a href="../about/about.html">عن الصندوق</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="village.html">
-                            عن قرية المشاوز
-                        </a>
+                        <a href="../village.html">عن قرية المشاوز</a>
                     </li>
 
                     <!-- Projects Dropdown -->
                     <li class="site-header__nav-item site-header__nav-item--dropdown">
 
-                        <a href="projects.html">
+                        <a href="../projects.html">
                             المشاريع
                         </a>
 
                         <ul class="site-header__dropdown">
 
                             <li>
-                                <a href="projects.html">
+                                <a href="../projects.html">
                                     المشاريع التنموية
                                 </a>
                             </li>
 
                             <li>
-                                <a href="solidarity.html">
+                                <a href="../Solidarity/solidarity.html">
                                     المشاريع التكافلية
                                 </a>
                             </li>
@@ -110,52 +87,29 @@
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="news.html">
-                            أخبار القرية
-                        </a>
+                        <a href="../news/news.html">أخبار القرية</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="team.html">
-                            فريق العمل
-                        </a>
+                        <a href="../team/team.html">فريق العمل</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="governance.html">
-                            الحوكمة
-                        </a>
+                        <a href="../Governence/governence.html">الحوكمة</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="contact.html">
-                            تواصل معنا
-                        </a>
+                        <a href="../contact/contact.html">تواصل معنا</a>
                     </li>
 
                 </ul>
 
             </nav>
 
-            <!-- Contribution CTA -->
-            <a
-                href="contribute.html"
-                class="btn btn--primary"
-                aria-current="page"
-            >
+            <!-- Main CTA -->
+            <a href="contribute.html" class="btn btn--primary">
                 ساهم معنا
             </a>
-
-            <!-- Mobile Menu -->
-            <button
-                class="site-header__menu-toggle"
-                type="button"
-                aria-label="فتح القائمة"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
 
         </div>
 
@@ -164,104 +118,112 @@
 
     <main>
 
-        <!-- =================================================
-             PAGE INTRODUCTION
-        ================================================== -->
+        <!-- =====================================================
+             PAGE HERO
+             Shared .page-hero from hero.css
+        ====================================================== -->
+        <section class="page-hero">
 
-        <section class="page-intro">
+            <div class="container">
+
+                <p class="page-hero__label">
+                    ساهم معنا
+                </p>
+
+                <h1 class="page-hero__title">
+                    ساهم في بناء وتنمية المجتمع
+                </h1>
+
+                <p class="page-hero__description">
+                    وسائل الدعم والمساهمة في صندوق المشاوز التكافلي التنموي لدعم المبادرات والمشاريع التنموية والتكافلية
+                    في القرية.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SUPPORT TRACKS
+             Reuses .about-preview, .section-heading,
+             .statistics__grid and .stat-card from cards.css
+        ====================================================== -->
+        <section class="about-preview">
 
             <div class="container">
 
                 <div class="section-heading">
 
                     <span class="section-heading__label">
-                        ساهم معنا
+                        مجالات المشاركة
                     </span>
 
-                    <h1 class="section-heading__title">
-                        ساهم معنا
-                    </h1>
-
-                    <p class="section-heading__description">
-                        وسائل الدعم والمساهمة في صندوق المشاوز التكافلي التنموي.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             SUPPORT METHODS
-        ================================================== -->
-
-        <section class="support-section">
-
-            <div class="container">
-
-                <div class="section-heading">
-
                     <h2 class="section-heading__title">
-                        وسائل الدعم
+                        وسائل الدعم والمساهمة
                     </h2>
 
                     <p class="section-heading__description">
-                        يمكنك المساهمة في دعم أعمال ومبادرات صندوق المشاوز التكافلي التنموي.
+                        يمكنك المساهمة في دعم أعمال ومبادرات صندوق المشاوز التكافلي التنموي عبر عدة مسارات:
                     </p>
 
                 </div>
 
 
-                <div class="support-grid">
+                <div class="statistics__grid">
 
-                    <article class="support-card">
+                    <!-- Track 1: Financial Support -->
+                    <article class="stat-card">
 
-                        <div class="support-card__icon">
+                        <div class="stat-card__number">
                             01
                         </div>
 
-                        <h3 class="support-card__title">
+                        <h3 class="stat-card__title">
                             الدعم المالي
                         </h3>
 
-                        <p class="support-card__description">
-                            المساهمة من خلال الحسابات البنكية المخصصة للصندوق.
+                        <p class="project-card__description">
+                            المساهمة المباشرة عبر الحسابات البنكية المخصصة للصندوق لتمويل المشاريع التنموية والخدمية
+                            وبرامج التكافل الاجتماعي.
                         </p>
 
                     </article>
 
 
-                    <article class="support-card">
+                    <!-- Track 2: Volunteering & Effort -->
+                    <article class="stat-card">
 
-                        <div class="support-card__icon">
+                        <div class="stat-card__number">
                             02
                         </div>
 
-                        <h3 class="support-card__title">
-                            الدعم والمشاركة
+                        <h3 class="stat-card__title">
+                            الدعم والتطوع
                         </h3>
 
-                        <p class="support-card__description">
-                            المساهمة في دعم المبادرات والمشاريع التي تخدم المجتمع.
+                        <p class="project-card__description">
+                            المساهمة بالخبرات والمهارات والجهد الميداني في التخطيط والإشراف والتنفيذ للمشاريع والمبادرات
+                            التي تخدم أهالي القرية.
                         </p>
 
                     </article>
 
 
-                    <article class="support-card">
+                    <!-- Track 3: In-kind & Partnerships -->
+                    <article class="stat-card">
 
-                        <div class="support-card__icon">
+                        <div class="stat-card__number">
                             03
                         </div>
 
-                        <h3 class="support-card__title">
-                            التواصل معنا
+                        <h3 class="stat-card__title">
+                            الدعم العيني والمبادرات
                         </h3>
 
-                        <p class="support-card__description">
-                            للتواصل والاستفسار حول وسائل الدعم والمساهمة.
+                        <p class="project-card__description">
+                            تقديم المواد والأجهزة والمعدات أو تبني ورعاية مشاريع ومبادرات نوعية في التعليم والصحة
+                            والمياه والبنية التحتية.
                         </p>
 
                     </article>
@@ -273,86 +235,323 @@
         </section>
 
 
-        <!-- =================================================
+        <!-- =====================================================
              BANK ACCOUNTS
-        ================================================== -->
-
-        <section class="bank-section">
+             Reuses .solidarity-preview from cards.css
+        ====================================================== -->
+        <section class="solidarity-preview">
 
             <div class="container">
 
                 <div class="section-heading">
 
+                    <span class="section-heading__label">
+                        التحويل المصرفي
+                    </span>
+
                     <h2 class="section-heading__title">
-                        الحسابات البنكية
+                        الحسابات البنكية المعتمدة
                     </h2>
 
                     <p class="section-heading__description">
-                        بيانات الحسابات البنكية الخاصة بالصندوق.
+                        يمكنكم إيداع أو تحويل مساهماتكم المالية عبر الحسابات البنكية الرسمية الخاصة بالصندوق:
                     </p>
 
                 </div>
 
 
-                <div class="bank-account">
+                <div class="news-grid">
 
-                    <!--
-                        بيانات الحساب البنكي غير مذكورة في ملف المهمة.
-                        يتم إضافتها لاحقاً عند توفر البيانات الرسمية.
-                    -->
+                    <!-- Bank Card 1 -->
+                    <article class="team-card" style="text-align: right; padding: 2rem;">
 
-                    <div class="bank-account__header">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                            <h3 class="project-card__title" style="margin-bottom: 0; color: var(--primary-color);">
+                                بنك الكريمي للتمويل الأصغر الإسلامي
+                            </h3>
+                            <span class="stat-card__number" style="font-size: 1.8rem;">🏦</span>
+                        </div>
 
-                        <h3>
-                            بيانات الحساب البنكي
-                        </h3>
+                        <div class="info-list">
+
+                            <div
+                                style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.75rem;">
+                                <strong style="color: var(--text-dark);">اسم الحساب:</strong>
+                                <span style="color: var(--text-muted);">صندوق المشاوز التكافلي التنموي</span>
+                            </div>
+
+                            <div
+                                style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.75rem;">
+                                <strong style="color: var(--text-dark);">رقم الحساب:</strong>
+                                <span style="color: var(--primary-color); font-weight: 700; font-size: 1.05rem;">سيتم
+                                    إضافته قريباً</span>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between;">
+                                <strong style="color: var(--text-dark);">العملة المقبولة:</strong>
+                                <span style="color: var(--text-muted);">ريال يمني (YER) / ريال سعودي (SAR) / دولار
+                                    (USD)</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Bank Card 2 -->
+                    <article class="team-card" style="text-align: right; padding: 2rem;">
+
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                            <h3 class="project-card__title" style="margin-bottom: 0; color: var(--secondary-color);">
+                                بنك التضامن / شبكات التحويل المحلية
+                            </h3>
+                            <span class="stat-card__number" style="font-size: 1.8rem;">💳</span>
+                        </div>
+
+                        <div class="info-list">
+
+                            <div
+                                style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.75rem;">
+                                <strong style="color: var(--text-dark);">اسم المستلم:</strong>
+                                <span style="color: var(--text-muted);">صندوق المشاوز التكافلي التنموي</span>
+                            </div>
+
+                            <div
+                                style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.75rem;">
+                                <strong style="color: var(--text-dark);">رقم الحساب / المحفظة:</strong>
+                                <span style="color: var(--secondary-color); font-weight: 700; font-size: 1.05rem;">سيتم
+                                    إضافته قريباً</span>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between;">
+                                <strong style="color: var(--text-dark);">الآيبان الدولي (IBAN):</strong>
+                                <span style="color: var(--text-muted);">متوفر عند طلب التحويل الخارجي</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTRIBUTION FORM & GUIDELINES
+             Reuses .team-preview (padding), .news-grid (2-col layout),
+             .team-card (card shell), .info-list and .form-group
+        ====================================================== -->
+        <section class="team-preview">
+
+            <div class="container">
+
+                <div class="news-grid">
+
+                    <!-- Right Column: Contribution Guidelines & Transparency -->
+                    <div>
+
+                        <div class="section-heading" style="text-align: right; margin-bottom: 1.5rem;">
+
+                            <span class="section-heading__label">
+                                إرشادات المساهمة
+                            </span>
+
+                            <h2 class="section-heading__title">
+                                الشفافية والتوثيق
+                            </h2>
+
+                            <p class="section-heading__description">
+                                نحرص في صندوق المشاوز على أعلى معايير الشفافية والأمانة في إدارة واستثمار كافة
+                                المساهمات.
+                            </p>
+
+                        </div>
+
+                        <div class="info-list">
+
+                            <!-- Guideline 1 -->
+                            <article class="team-card" style="text-align: right;">
+
+                                <div class="stat-card__number" style="font-size: 2rem; margin-bottom: 0.5rem;">
+                                    📑
+                                </div>
+
+                                <h3 class="project-card__title">
+                                    توثيق المساهمات وسندات الاستلام
+                                </h3>
+
+                                <p class="project-card__description">
+                                    يُرجى إرسال بيانات التحويل أو إشعار الإيداع عبر النموذج المرفق أو عبر الواتساب
+                                    لإصدار سند استلام رسمي وتوثيق المساهمة في سجلات الصندوق.
+                                </p>
+
+                            </article>
+
+
+                            <!-- Guideline 2 -->
+                            <article class="team-card" style="text-align: right;">
+
+                                <div class="stat-card__number" style="font-size: 2rem; margin-bottom: 0.5rem;">
+                                    📊
+                                </div>
+
+                                <h3 class="project-card__title">
+                                    التقارير الدورية والإشراف
+                                </h3>
+
+                                <p class="project-card__description">
+                                    يتم نشر تقارير دورية توضح كافة الإيرادات وأوجه الصرف ومراحل إنجاز المشاريع لضمان
+                                    الشفافية واطلاع المجتمع والداعمين.
+                                </p>
+
+                            </article>
+
+
+                            <!-- Guideline 3 -->
+                            <article class="team-card" style="text-align: right;">
+
+                                <div class="stat-card__number" style="font-size: 2rem; margin-bottom: 0.5rem;">
+                                    📞
+                                </div>
+
+                                <h3 class="project-card__title">
+                                    التواصل المباشر والاستفسارات
+                                </h3>
+
+                                <p class="project-card__description">
+                                    فريق العمل متاح للإجابة على استفساراتكم ومناقشة تفاصيل المشاريع عبر الهاتف:
+                                    <a href="tel:780810312" class="project-card__link">780810312</a>
+                                    أو البريد:
+                                    <a href="mailto:info@mashawizfund.org"
+                                        class="project-card__link">info@mashawizfund.org</a>.
+                                </p>
+
+                            </article>
+
+                        </div>
 
                     </div>
 
-                    <div class="bank-account__body">
 
-                        <div class="bank-detail">
-                            <span class="bank-detail__label">
-                                اسم البنك
+                    <!-- Left Column: Contribution Form -->
+                    <div>
+
+                        <div class="section-heading" style="text-align: right; margin-bottom: 1.5rem;">
+
+                            <span class="section-heading__label">
+                                نموذج المساهمة
                             </span>
 
-                            <span class="bank-detail__value">
-                                —
-                            </span>
+                            <h2 class="section-heading__title">
+                                تسجيل بيانات المساهمة
+                            </h2>
+
+                            <p class="section-heading__description">
+                                يرجى ملء النموذج أدناه لتسجيل مساهمتك أو إرسال مقترحك إلى إدارة الصندوق:
+                            </p>
+
                         </div>
 
 
-                        <div class="bank-detail">
-                            <span class="bank-detail__label">
-                                اسم الحساب
-                            </span>
+                        <form action="#" method="post"
+                            style="background-color: var(--white); padding: 2rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
 
-                            <span class="bank-detail__value">
-                                —
-                            </span>
-                        </div>
+                            <!-- Name -->
+                            <div class="form-group">
 
+                                <label for="name">
+                                    الاسم الكامل
+                                </label>
 
-                        <div class="bank-detail">
-                            <span class="bank-detail__label">
-                                رقم الحساب
-                            </span>
+                                <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
 
-                            <span class="bank-detail__value">
-                                —
-                            </span>
-                        </div>
+                            </div>
 
 
-                        <div class="bank-detail">
-                            <span class="bank-detail__label">
-                                رقم الآيبان
-                            </span>
+                            <!-- Phone -->
+                            <div class="form-group">
 
-                            <span class="bank-detail__value">
-                                —
-                            </span>
-                        </div>
+                                <label for="phone">
+                                    رقم الهاتف / الواتساب
+                                </label>
+
+                                <input type="tel" id="phone" name="phone" placeholder="مثال: 780810312" required>
+
+                            </div>
+
+
+                            <!-- Email -->
+                            <div class="form-group">
+
+                                <label for="email">
+                                    البريد الإلكتروني
+                                </label>
+
+                                <input type="email" id="email" name="email" placeholder="example@domain.com">
+
+                            </div>
+
+
+                            <!-- Contribution Type -->
+                            <div class="form-group">
+
+                                <label for="contribution-type">
+                                    نوع المساهمة
+                                </label>
+
+                                <select id="contribution-type" name="contribution_type"
+                                    style="width: 100%; padding: 0.75rem 1rem; color: var(--text-dark); background-color: var(--white); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font: inherit;"
+                                    required>
+                                    <option value="" disabled selected>اختر نوع المساهمة...</option>
+                                    <option value="financial_general">دعم مالي عام لمشاريع الصندوق</option>
+                                    <option value="financial_specific">دعم مالي لمشروع محدد (مياه / تعليم / صحة)
+                                    </option>
+                                    <option value="solidarity">مساهمة في البرامج التكافلية والإغاثية</option>
+                                    <option value="in_kind">مساهمة عينية (أجهزة / مواد / معدات)</option>
+                                    <option value="volunteer">مشاركة تطوعية واستشارية</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+
+                            </div>
+
+
+                            <!-- Amount / Note Details -->
+                            <div class="form-group">
+
+                                <label for="amount">
+                                    المبلغ المقدر أو تفاصيل المساهمة
+                                </label>
+
+                                <input type="text" id="amount" name="amount"
+                                    placeholder="المبلغ، أو طبيعة المواد أو ساعات التطوع">
+
+                            </div>
+
+
+                            <!-- Message -->
+                            <div class="form-group">
+
+                                <label for="message">
+                                    ملاحظات أو تفاصيل إضافية
+                                </label>
+
+                                <textarea id="message" name="message" rows="4"
+                                    placeholder="اكتب أي ملاحظات، أو رقم الحوالة، أو تفاصيل المبادرة..."></textarea>
+
+                            </div>
+
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn btn--primary" style="width: 100%;">
+                                إرسال بيانات المساهمة
+                            </button>
+
+                        </form>
 
                     </div>
 
@@ -363,113 +562,28 @@
         </section>
 
 
-        <!-- =================================================
-             CONTACT FORM
-        ================================================== -->
-
-        <section class="contribute-form-section">
+        <!-- =====================================================
+             CONTRIBUTE CTA
+             Reuses .contribute-cta from cards.css
+        ====================================================== -->
+        <section class="contribute-cta">
 
             <div class="container">
 
-                <div class="contribute-form-wrapper">
+                <div class="contribute-cta__content">
 
-                    <div class="contribute-form__intro">
+                    <h2>
+                        معًا من أجل مجتمع متكافل ومزدهر
+                    </h2>
 
-                        <span class="section-heading__label">
-                            التواصل
-                        </span>
+                    <p>
+                        كل مساهمة، مهما كانت بسيطة، تصنع فارقاً ملموساً في حياة أهالي قرية المشاوز وتدعم استدامة
+                        مشاريعنا التنموية.
+                    </p>
 
-                        <h2>
-                            نموذج التواصل
-                        </h2>
-
-                        <p>
-                            للتواصل مع صندوق المشاوز التكافلي التنموي.
-                        </p>
-
-                    </div>
-
-
-                    <form
-                        class="contribute-form"
-                        action="#"
-                        method="post"
-                    >
-
-                        <div class="form-group">
-
-                            <label for="name">
-                                الاسم
-                            </label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                autocomplete="name"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="email">
-                                البريد الإلكتروني
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                autocomplete="email"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="phone">
-                                الهاتف
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                autocomplete="tel"
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="message">
-                                الرسالة
-                            </label>
-
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="6"
-                                required
-                            ></textarea>
-
-                        </div>
-
-
-                        <button
-                            type="submit"
-                            class="btn btn--primary"
-                        >
-                            إرسال
-                        </button>
-
-                    </form>
+                    <a href="../contact/contact.html" class="btn btn--accent">
+                        تواصل مع إدارة الصندوق
+                    </a>
 
                 </div>
 
@@ -482,29 +596,24 @@
 
     <!-- =====================================================
          FOOTER
+         Shared across all pages
     ====================================================== -->
-
     <footer class="site-footer">
 
         <div class="container">
 
             <div class="site-footer__grid">
 
-                <!-- About -->
+                <!-- Footer About -->
                 <div class="site-footer__about">
 
-                    <a
-                        href="index.html"
-                        class="site-footer__logo"
-                    >
-                        <img
-                            src="images/logo.png"
-                            alt="صندوق المشاوز التكافلي التنموي"
-                        >
+                    <a href="../Index/index.html" class="site-footer__logo">
+                        <img src="../images/logo.png" alt="شعار صندوق المشاوز التكافلي التنموي">
                     </a>
 
                     <p>
-                        صندوق المشاوز التكافلي التنموي.
+                        صندوق مجتمعي يهدف إلى دعم التنمية والتكافل
+                        الاجتماعي في قرية المشاوز بمحافظة تعز، اليمن.
                     </p>
 
                 </div>
@@ -520,7 +629,7 @@
                     <ul>
 
                         <li>
-                            <a href="index.html">
+                            <a href="../Index/index.html">
                                 الرئيسية
                             </a>
                         </li>
@@ -532,20 +641,32 @@
                         </li>
 
                         <li>
-                            <a href="village.html">
+                            <a href="../village.html">
                                 عن قرية المشاوز
                             </a>
                         </li>
 
                         <li>
-                            <a href="projects.html">
-                                المشاريع
+                            <a href="../projects.html">
+                                المشاريع التنموية
                             </a>
                         </li>
 
                         <li>
-                            <a href="news.html">
+                            <a href="../solidarity.html">
+                                المشاريع التكافلية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../news/news.html">
                                 أخبار القرية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../governance.html">
+                                الحوكمة
                             </a>
                         </li>
 
@@ -554,7 +675,7 @@
                 </div>
 
 
-                <!-- Contact -->
+                <!-- Contact Information -->
                 <div class="site-footer__contact">
 
                     <h3>
@@ -586,7 +707,7 @@
                 <div class="site-footer__social">
 
                     <h3>
-                        وسائل التواصل الاجتماعي
+                        تابعنا
                     </h3>
 
                     <div class="social-links">
@@ -597,6 +718,10 @@
 
                         <a href="#" aria-label="واتساب">
                             WhatsApp
+                        </a>
+
+                        <a href="#" aria-label="تويتر">
+                            X
                         </a>
 
                     </div>
@@ -610,7 +735,7 @@
             <div class="site-footer__bottom">
 
                 <p>
-                    جميع الحقوق محفوظة.
+                    جميع الحقوق محفوظة © صندوق المشاوز التكافلي التنموي
                 </p>
 
             </div>
@@ -618,6 +743,7 @@
         </div>
 
     </footer>
+
 
 </body>
 
