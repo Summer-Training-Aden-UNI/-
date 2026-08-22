@@ -1,120 +1,146 @@
 /* =========================================
-   TEAM PAGE - RESPONSIVE
+   TEAM PAGE
+   RESPONSIVE DESIGN
 ========================================= */
 
 
 /* =========================================
-   Large Tablet / Small Desktop
+   TABLET
+   992px and below
 ========================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 992px) {
 
-    .team-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* -------------------------
+       Container
+    ------------------------- */
 
-        gap: 1.5rem;
+    .container {
+        width: min(92%, 1100px);
     }
 
-}
 
-
-/* =========================================
-   Tablet
-========================================= */
-
-@media (max-width: 850px) {
+    /* -------------------------
+       Team Hero
+    ------------------------- */
 
     .team-hero {
-        min-height: 330px;
+        min-height: 380px;
     }
 
     .team-hero__content {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
+        max-width: 650px;
+        padding: 4rem 0;
     }
+
+
+    /* -------------------------
+       Team Grid
+    ------------------------- */
 
     .team-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
+
+
+    /* -------------------------
+       Team Section
+    ------------------------- */
 
     .team-section {
         padding: 4rem 0;
     }
 
+
+    /* -------------------------
+       Section Heading
+    ------------------------- */
+
+    .section-heading {
+        max-width: 650px;
+        margin-bottom: 2.5rem;
+    }
+
 }
 
 
 /* =========================================
-   Mobile
+   MOBILE TABLET
+   768px and below
 ========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
-    /* Hero */
+    /* -------------------------
+       General
+    ------------------------- */
+
+    .container {
+        width: min(90%, 600px);
+    }
+
+
+    /* -------------------------
+       Header
+    ------------------------- */
+
+    .header__container {
+        min-height: 70px;
+    }
+
+
+    /*
+       The hamburger menu should be
+       controlled by header.css.
+       We only make sure the navigation
+       does not affect the page width.
+    */
+
+    .main-nav {
+        max-width: 100%;
+    }
+
+
+    /* -------------------------
+       Team Hero
+    ------------------------- */
 
     .team-hero {
-        min-height: 320px;
+        min-height: 360px;
     }
 
     .team-hero__content {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding: 4rem 0;
     }
 
     .team-hero__title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
-    .team-hero__description {
+    .team-hero__text {
         max-width: 100%;
-
         font-size: 1rem;
-
-        line-height: 1.8;
+        line-height: 1.9;
     }
 
 
-    /* Sections */
+    /* -------------------------
+       Team Sections
+    ------------------------- */
 
     .team-section {
-        padding: 3.5rem 0;
+        padding: 4rem 0;
     }
 
 
-    /* Section Heading */
-
-    .section-heading {
-        margin-bottom: 2rem;
-    }
-
-    .section-heading__title {
-        font-size: 1.8rem;
-    }
-
-    .section-heading__description {
-        font-size: 0.95rem;
-    }
-
-
-    /* Team Grid */
+    /* -------------------------
+       Team Cards
+    ------------------------- */
 
     .team-grid {
-        grid-template-columns: 1fr;
-
-        max-width: 360px;
-
-        margin: 0 auto;
-
-        gap: 1.5rem;
-    }
-
-
-    /* Team Card */
-
-    .team-card__image-wrapper {
-        padding-top: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
     }
 
     .team-card__image {
@@ -126,21 +152,127 @@
 
 
 /* =========================================
-   Very Small Mobile
+   MOBILE
+   576px and below
 ========================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 576px) {
+
+    /* -------------------------
+       Container
+    ------------------------- */
+
+    .container {
+        width: min(92%, 400px);
+    }
+
+
+    /* -------------------------
+       Team Hero
+    ------------------------- */
 
     .team-hero {
-        min-height: 300px;
+        min-height: 330px;
+    }
+
+    .team-hero__content {
+        padding: 3.5rem 0;
+    }
+
+    .team-hero__label {
+        margin-bottom: 0.9rem;
+        padding: 0.4rem 0.9rem;
+
+        font-size: 0.8rem;
     }
 
     .team-hero__title {
-        font-size: 2rem;
+        margin-bottom: 1rem;
+
+        font-size: 2.2rem;
     }
 
-    .team-hero__description {
+    .team-hero__text {
+        margin-bottom: 1.4rem;
+
         font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+
+    /* -------------------------
+       Breadcrumb
+    ------------------------- */
+
+    .team-hero__breadcrumb {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+
+    /* -------------------------
+       Team Sections
+    ------------------------- */
+
+    .team-section {
+        padding: 3.5rem 0;
+    }
+
+
+    /* -------------------------
+       Section Heading
+    ------------------------- */
+
+    .section-heading {
+        margin-bottom: 2rem;
+    }
+
+    .section-heading__subtitle {
+        font-size: 0.85rem;
+    }
+
+    .section-heading__title {
+        margin-bottom: 0.8rem;
+
+        font-size: 1.8rem;
+    }
+
+    .section-heading__description {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+
+    /* -------------------------
+       Team Grid
+    ------------------------- */
+
+    .team-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 350px;
+
+        margin: 0 auto;
+
+        gap: 1.5rem;
+    }
+
+
+    /* -------------------------
+       Team Card
+    ------------------------- */
+
+    .team-card__image-wrapper {
+        padding: 2rem 1rem 1rem;
+    }
+
+    .team-card__image {
+        width: 135px;
+        height: 135px;
+    }
+
+    .team-card__content {
+        padding: 1rem 1.25rem 1.75rem;
     }
 
     .team-card__name {
@@ -149,6 +281,83 @@
 
     .team-card__role {
         font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   400px and below
+========================================= */
+
+@media (max-width: 400px) {
+
+    /* -------------------------
+       Container
+    ------------------------- */
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* -------------------------
+       Hero
+    ------------------------- */
+
+    .team-hero {
+        min-height: 310px;
+    }
+
+    .team-hero__content {
+        padding: 3rem 0;
+    }
+
+    .team-hero__title {
+        font-size: 2rem;
+    }
+
+    .team-hero__text {
+        font-size: 0.9rem;
+    }
+
+
+    /* -------------------------
+       Team Section
+    ------------------------- */
+
+    .team-section {
+        padding: 3rem 0;
+    }
+
+
+    /* -------------------------
+       Team Card
+    ------------------------- */
+
+    .team-grid {
+        max-width: 320px;
+    }
+
+    .team-card__image {
+        width: 120px;
+        height: 120px;
+    }
+
+}
+
+
+/* =========================================
+   REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .team-card,
+    .team-card__image,
+    .team-hero__breadcrumb a {
+        transition: none;
     }
 
 }
