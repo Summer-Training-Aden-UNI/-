@@ -27,6 +27,443 @@
     <link rel="stylesheet" href="../Index/css/responsive.css">
     <link rel="stylesheet" href="../Index/css/cards.css">
 
+    <style>
+    /* ============================================================
+       TEAM PAGE — INLINE STYLES (Hero)
+    ============================================================ */
+
+    /* ---------- HERO ---------- */
+    .team-hero {
+        position: relative;
+        min-height: 520px;
+        display: flex;
+        align-items: center;
+        background:
+            linear-gradient(135deg,
+                rgba(27, 94, 32, .96) 0%,
+                rgba(49, 27, 146, .88) 60%,
+                rgba(249, 168, 37, .35) 100%),
+            url('../Images/index_hero.jpeg') center/cover no-repeat;
+        overflow: hidden;
+        padding: 6.5rem 0 4.5rem;
+    }
+
+    /* animated blobs */
+    .team-hero::before,
+    .team-hero::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        opacity: .10;
+        animation: teamBlob 9s ease-in-out infinite alternate;
+    }
+    .team-hero::before {
+        width: 480px; height: 480px;
+        background: var(--accent-color);
+        top: -110px; right: -90px;
+    }
+    .team-hero::after {
+        width: 340px; height: 340px;
+        background: #fff;
+        bottom: -70px; left: -70px;
+        animation-delay: -5s;
+    }
+    @keyframes teamBlob {
+        from { transform: scale(1) translate(0, 0); }
+        to   { transform: scale(1.18) translate(-18px, 18px); }
+    }
+
+    /* decorative circles */
+    .team-hero__decor {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    .team-hero__decor span {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,.07);
+    }
+    .team-hero__decor span:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 5%; }
+    .team-hero__decor span:nth-child(2) { width: 180px; height: 180px; top: 55%; left: 20%; }
+    .team-hero__decor span:nth-child(3) { width: 420px; height: 420px; top: -8%; right: 12%; }
+
+    .team-hero__content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: #fff;
+    }
+
+    .team-hero__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        background: rgba(249,168,37,.18);
+        border: 1px solid rgba(249,168,37,.5);
+        color: var(--accent-color);
+        font-size: .85rem;
+        font-weight: 700;
+        padding: .4rem 1.2rem;
+        border-radius: 30px;
+        letter-spacing: .05em;
+        margin-bottom: 1.2rem;
+        backdrop-filter: blur(6px);
+    }
+
+    .team-hero__title {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 900;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 20px rgba(0,0,0,.45);
+    }
+    .team-hero__title span { color: var(--accent-color); }
+
+    .team-hero__description {
+        font-size: 1.05rem;
+        color: rgba(255,255,255,.87);
+        max-width: 580px;
+        margin: 0 auto 2.2rem;
+        line-height: 1.75;
+    }
+
+    /* Breadcrumb */
+    .team-hero__breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        font-size: .85rem;
+        color: rgba(255,255,255,.6);
+        margin-bottom: 2.5rem;
+    }
+    .team-hero__breadcrumb a {
+        color: rgba(255,255,255,.75);
+        text-decoration: none;
+        transition: color .25s;
+    }
+    .team-hero__breadcrumb a:hover { color: var(--accent-color); }
+    .team-hero__breadcrumb .active { color: #fff; font-weight: 600; }
+
+    /* Stats strip */
+    .team-hero__stats {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,.14);
+    }
+    .team-hero__stat { text-align: center; }
+    .team-hero__stat-value {
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--accent-color);
+        display: block;
+        line-height: 1;
+    }
+    .team-hero__stat-label {
+        font-size: .8rem;
+        color: rgba(255,255,255,.68);
+        margin-top: .28rem;
+        display: block;
+    }
+
+    /* wave divider */
+    .team-hero-wave {
+        display: block;
+        width: 100%;
+        margin-top: -2px;
+        line-height: 0;
+    }
+    .team-hero-wave svg { display: block; width: 100%; }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+        .team-hero { padding: 5rem 0 3rem; min-height: auto; }
+        .team-hero__stats { gap: 1.5rem; }
+    }
+
+    /* ============================================================
+       TEAM BODY STYLES
+    ============================================================ */
+
+    /* Section headings */
+    .section-heading { text-align: center; margin-bottom: 3rem; }
+    .section-heading__label {
+        display: inline-block;
+        background: linear-gradient(90deg, #2e7d32, #4caf50);
+        color: #fff;
+        font-size: .78rem;
+        font-weight: 800;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        padding: .3rem 1rem;
+        border-radius: 20px;
+        margin-bottom: .7rem;
+    }
+    .section-heading__title {
+        font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+        font-weight: 800;
+        color: var(--text-dark);
+        position: relative;
+        display: inline-block;
+        padding-bottom: .65rem;
+    }
+    .section-heading__title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 50%; left: 50%;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--accent-color);
+        transition: right .4s, left .4s;
+    }
+    .section-heading:hover .section-heading__title::after { right: 0; left: 0; }
+    .section-heading__description {
+        color: var(--text-muted);
+        font-size: .95rem;
+        margin-top: .6rem;
+        max-width: 520px;
+        margin-inline: auto;
+        line-height: 1.7;
+    }
+
+    /* Team sections */
+    .team-section {
+        padding: 5rem 0;
+        background: #fff;
+    }
+    .team-section--alternate {
+        background: var(--bg-light, #f5f5f5);
+    }
+
+    /* Team grid */
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 2rem;
+    }
+
+    /* Team card */
+    .team-card {
+        background: #fff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,.07);
+        border: 1px solid #e8e8e8;
+        display: flex;
+        flex-direction: column;
+        transition: transform .35s, box-shadow .35s;
+        position: relative;
+    }
+    .team-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 40px rgba(46,125,50,.15);
+    }
+
+    /* top accent line */
+    .team-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #2e7d32, #1565c0);
+        opacity: 0;
+        transition: opacity .35s;
+    }
+    .team-card:hover::before { opacity: 1; }
+
+    /* Image wrapper */
+    .team-card__image-wrapper {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #1b5e20, #311b92);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .team-card__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        transition: transform .5s;
+    }
+    .team-card:hover .team-card__image { transform: scale(1.06); }
+
+    /* Avatar fallback (when image missing/broken) */
+    .team-card__image-wrapper::after {
+        content: attr(data-initials);
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        font-weight: 900;
+        color: rgba(255,255,255,.25);
+        pointer-events: none;
+    }
+
+    /* Card icon fallback */
+    .team-card__avatar-icon {
+        font-size: 4rem;
+        color: rgba(255,255,255,.4);
+        position: absolute;
+    }
+
+    /* Content area */
+    .team-card__content {
+        padding: 1.4rem 1.2rem 1.2rem;
+        text-align: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .4rem;
+    }
+    .team-card__name {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        margin: 0;
+        line-height: 1.3;
+    }
+    .team-card__role {
+        display: inline-block;
+        background: linear-gradient(90deg, #2e7d32, #4caf50);
+        color: #fff;
+        font-size: .76rem;
+        font-weight: 700;
+        padding: .25rem .85rem;
+        border-radius: 20px;
+        margin: .2rem 0 .5rem;
+    }
+    .team-card--supervisory .team-card__role {
+        background: linear-gradient(90deg, #1565c0, #311b92);
+    }
+    .team-card__social {
+        display: flex;
+        gap: .5rem;
+        margin-top: .5rem;
+    }
+    .team-card__social a {
+        width: 32px; height: 32px;
+        border-radius: 50%;
+        background: #f0f0f0;
+        color: var(--text-muted);
+        display: flex; align-items: center; justify-content: center;
+        font-size: .8rem;
+        text-decoration: none;
+        transition: background .25s, color .25s, transform .25s;
+    }
+    .team-card__social a:hover {
+        background: var(--primary-color);
+        color: #fff;
+        transform: scale(1.15);
+    }
+
+    /* Volunteer CTA Banner */
+    .team-cta {
+        padding: 1rem 0;
+        background: #fff;
+    }
+    .team-cta__inner {
+        position: relative;
+        overflow: hidden;
+        padding: 3.5rem 2.5rem;
+        background: linear-gradient(135deg, #1b5e20, #2e7d32 45%, #311b92);
+        border-radius: 20px;
+        text-align: center;
+        color: #fff;
+    }
+    .team-cta__inner::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .team-cta__icon {
+        width: 68px; height: 68px;
+        background: rgba(249,168,37,.2);
+        border: 2px solid rgba(249,168,37,.5);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.7rem;
+        color: var(--accent-color, #f9a825);
+        margin: 0 auto 1.2rem;
+        position: relative;
+    }
+    .team-cta__inner h2 {
+        font-size: 1.7rem;
+        font-weight: 800;
+        margin-bottom: .65rem;
+        position: relative;
+    }
+    .team-cta__inner p {
+        color: rgba(255,255,255,.84);
+        font-size: .95rem;
+        max-width: 500px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+        position: relative;
+    }
+    .team-cta__actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-flex; align-items: center; gap: .5rem;
+        padding: .75rem 1.7rem;
+        border-radius: 30px;
+        font-family: var(--font-family);
+        font-size: .9rem;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all .3s;
+    }
+    .btn--primary {
+        background: var(--primary-color, #2e7d32);
+        color: #fff;
+        border-color: var(--primary-color, #2e7d32);
+    }
+    .btn--primary:hover { background: #1b5e20; border-color: #1b5e20; }
+    .btn--accent {
+        background: var(--accent-color, #f9a825);
+        color: #1a1a1a;
+        border-color: var(--accent-color, #f9a825);
+    }
+    .btn--accent:hover { background: #f57f17; border-color: #f57f17; }
+    .btn--outline-white {
+        background: transparent;
+        color: #fff;
+        border-color: rgba(255,255,255,.6);
+    }
+    .btn--outline-white:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+
+    /* Body responsive */
+    @media (max-width: 768px) {
+        .team-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+        .team-grid { grid-template-columns: 1fr; }
+        .team-cta__inner { padding: 2.5rem 1.5rem; }
+    }
+    </style>
+
 </head>
 
 
@@ -49,7 +486,7 @@
             </a>
 
 
-            <!-- Mobile Menu Toggle -->
+            
            <!-- Mobile Menu Toggle -->
             <input type="checkbox" id="menu-toggle" class="site-header__menu-checkbox" aria-label="فتح القائمة">
             <label for="menu-toggle" class="site-header__menu-toggle" aria-label="فتح القائمة">
@@ -101,52 +538,71 @@
         </div>
     </header>
 
-     <!--  =====================================================
-             HERO SECTION
-             Homepage only
-        ====================================================== -->
-        <section class="hero">
+    <!-- =====================================================
+         HERO SECTION — TEAM PAGE
+    ====================================================== -->
+    <section class="team-hero">
 
-            <div class="hero__background">
-                <img src="../Images/index_hero.jpeg" alt="منظر بانورامي لقرية المشاوز">
-            </div>
+        <!-- decorative rings -->
+        <div class="team-hero__decor" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-            <div class="hero__overlay"></div>
+        <div class="container team-hero__content">
 
-            <div class="container">
+            <span class="team-hero__badge">
+                <i class="fa-solid fa-users"></i> الكوادر البشرية للصندوق
+            </span>
 
-                <div class="hero__content">
+            <h1 class="team-hero__title">
+                تعرّف على <span>فريق العمل</span>
+            </h1>
 
-                    <p class="hero__subtitle">
-                        صندوق المشاوز التكافلي التنموي
-                    </p>
+            <p class="team-hero__description">
+                رجال ونساء من أبناء قرية المشاوز يُسخّرون خبراتهم وجهودهم
+                التطوعية لخدمة المجتمع وتحقيق التنمية المستدامة.
+            </p>
 
-                    <h1 class="hero__title">
-                        معًا نبني مستقبل قرية المشاوز
-                    </h1>
+            <!-- Breadcrumb -->
+            <nav class="team-hero__breadcrumb" aria-label="مسار التنقل">
+                <a href="../Index/index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                <span>/</span>
+                <span class="active">فريق العمل</span>
+            </nav>
 
-                    <p class="hero__description">
-                        صندوق مجتمعي يهدف إلى دعم التنمية والتكافل
-                        الاجتماعي في قرية المشاوز بمحافظة تعز.
-                    </p>
-
-                    <div class="hero__actions">
-
-                        <a href="../contribute/contribute.html" class="btn btn--primary">
-                            ساهم معنا
-                        </a>
-
-                        <a href="../about/about.html" class="btn btn--secondary">
-                            تعرف على الصندوق
-                        </a>
-
-                    </div>
-
+            <!-- Stats Strip -->
+            <div class="team-hero__stats">
+                <div class="team-hero__stat">
+                    <span class="team-hero__stat-value">24</span>
+                    <span class="team-hero__stat-label">عضواً في الفريق</span>
                 </div>
-
+                <div class="team-hero__stat">
+                    <span class="team-hero__stat-value">6</span>
+                    <span class="team-hero__stat-label">لجان متخصصة</span>
+                </div>
+                <div class="team-hero__stat">
+                    <span class="team-hero__stat-value">40+</span>
+                    <span class="team-hero__stat-label">متطوع نشط</span>
+                </div>
+                <div class="team-hero__stat">
+                    <span class="team-hero__stat-value">5</span>
+                    <span class="team-hero__stat-label">سنوات من العطاء</span>
+    
+                </div>
+    
             </div>
 
-        </section>
+        </div>
+    </section>
+
+    <!-- Wave divider -->
+    <div class="team-hero-wave">
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,20 C480,70 960,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+        </svg>
+    </div>
 
    
 
@@ -157,160 +613,100 @@
 
       <section class="team-section">
 
-            <div class="container">
+        
+        <div class="container">
 
-
-                <!-- Section Heading -->
-
-                <div class="section-heading">
-
-                    <span class="section-heading__label">
-                        إدارة الصندوق
-                    </span>
-
-                    <h2 class="section-heading__title">
-                        الهيئة الإدارية
-                    </h2>
-
-                    <p class="section-heading__description">
-                        أعضاء الهيئة الإدارية الذين يساهمون في إدارة
-                        وتنظيم أعمال الصندوق وبرامجه.
-                    </p>
-
-                </div>
-
-
-                <!-- Team Members -->
-
+                              <!-- Team Members -->
                 <div class="team-grid">
-
-
-                    <!-- Member 1 -->
-
+ 
+                     <!-- Member 1 -->
                     <article class="team-card">
-
-                        <div class="team-card__image-wrapper">
-
-                            <img
-                                src="images/team/member-01.jpg"
-                                alt="صورة رئيس الهيئة الإدارية"
-                                class="team-card__image"
-                            >
-
-                       </div>
-
-                        <div class="team-card__content">
-
-                            <h3 class="team-card__name">
-                                اسم العضو
-                            </h3>
-
-                            <p class="team-card__role">
-                                رئيس الهيئة الإدارية
-                            </p>
-
+                        <div class="team-card__image-wrapper" data-initials="ع">
+                            <img src="images/team/member-01.svg" alt="صورة رئيس الهيئة الإدارية" class="team-card__image">
                         </div>
+                        <div class="team-card__content">
+                            <h3 class="team-card__name">اسم العضو</h3>
+                            <span class="team-card__role">رئيس الهيئة الإدارية</span>
+                            <div class="team-card__social">
+                                <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" aria-label="بريد"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                         </div>
+                     </article>
 
-                    </article>
-
-
-
-                    <!-- Member 2 -->
-
+                     <!-- Member 2 -->
                     <article class="team-card">
-
-                        <div class="team-card__image-wrapper">
-
-                            <img
-                                src="images/team/member-02.jpg"
-                                alt="صورة نائب رئيس الهيئة"
-                                class="team-card__image"
-                            >
-
-                     </div>
-
-                        <div class="team-card__content">
-
-                            <h3 class="team-card__name">
-                                اسم العضو
-                            </h3>
-
-                            <p class="team-card__role">
-                                نائب رئيس الهيئة
-                            </p>
-
+                        <div class="team-card__image-wrapper" data-initials="ع">
+                            <img src="images/team/member-02.svg" alt="صورة نائب رئيس الهيئة" class="team-card__image">
                         </div>
+                        <div class="team-card__content">
+                            <h3 class="team-card__name">اسم العضو</h3>
+                            <span class="team-card__role">نائب رئيس الهيئة</span>
+                            <div class="team-card__social">
+                                <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" aria-label="بريد"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                     </article>
 
-                    </article>
+                     <!-- Member 3 -->
+                     <article class="team-card">
+                        <div class="team-card__image-wrapper" data-initials="ع">
+                            <img src="images/team/member-03.svg" alt="صورة عضو الهيئة الإدارية" class="team-card__image">
+                        </div>
+                        <div class="team-card__content">
+                            <h3 class="team-card__name">اسم العضو</h3>
+                            <span class="team-card__role">عضو الهيئة الإدارية</span>
+                            <div class="team-card__social">
+                                <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" aria-label="بريد"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                     </article>
 
-
-
-                    <!-- Member 3 -->
-
+                     <!-- Member 4 -->
                     <article class="team-card">
-
-                        <div class="team-card__image-wrapper">
-
-                            <img
-                                src="images/team/member-03.jpg"
-                                alt="صورة عضو الهيئة الإدارية"
-                                class="team-card__image"
-                            >
-
-                     </div>
-
-                        <div class="team-card__content">
-
-                            <h3 class="team-card__name">
-                                اسم العضو
-                            </h3>
-
-                            <p class="team-card__role">
-                                عضو الهيئة الإدارية
-                            </p>
-
+                        <div class="team-card__image-wrapper" data-initials="ع">
+                            <img src="images/team/member-04.svg" alt="صورة أمين الصندوق" class="team-card__image">
                         </div>
-
-                    </article>
-
-
-
-                    <!-- Member 4 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__image-wrapper">
-
-                            <img
-                                src="images/team/member-04.jpg"
-                                alt="صورة أمين الصندوق"
-                                class="team-card__image"
-                            >
-
-                     </div>
-
                         <div class="team-card__content">
-
-                            <h3 class="team-card__name">
-                                اسم العضو
-                            </h3>
-
-                            <p class="team-card__role">
-                                أمين الصندوق
-                            </p>
-
+                            <h3 class="team-card__name">اسم العضو</h3>
+                            <span class="team-card__role">أمين الصندوق</span>
+                            <div class="team-card__social">
+                                <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" aria-label="بريد"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
                         </div>
-
                     </article>
-
 
                 </div>
-
+            
             </div>
-
+        
         </section>
 
-
+        <!-- =========================================
+             VOLUNTEER CTA BANNER
+        ========================================== -->
+        <section class="team-cta">
+            <div class="container">
+                <div class="team-cta__inner">
+                    <div class="team-cta__icon">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
+                    </div>
+                    <h2>هل ترغب في الانضمام إلى فريق العمل؟</h2>
+                    <p>صندوق المشاوز يرحب دائماً بالكوادر المتحمسة من أبناء القرية للمساهمة في بناء المجتمع وخدمة أهل القرية بكل ما يستطيعون.</p>
+                    <div class="team-cta__actions">
+                        <a href="../contact/contact.html" class="btn btn--accent">
+                            <i class="fa-solid fa-paper-plane"></i> تواصل معنا
+                        </a>
+                        <a href="../contribute/contribute.html" class="btn btn--outline-white">
+                            <i class="fa-solid fa-hand-holding-heart"></i> ساهم مالياً
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- =========================================
              SUPERVISORY COMMITTEE
@@ -320,131 +716,66 @@
 
             <div class="container">
 
-
                 <!-- Section Heading -->
-
                 <div class="section-heading">
-
-                    <span class="section-heading__label">
-                        الرقابة والمتابعة
-                    </span>
-
-                    <h2 class="section-heading__title">
-                        اللجنة الرقابية
-                    </h2>
-
-                    <p class="section-heading__description">
-                        أعضاء اللجنة الرقابية المكلفون بمتابعة أعمال
-                        الصندوق وتعزيز الشفافية والرقابة.
-                    </p>
-
+                    <span class="section-heading__label">الرقابة والمتابعة</span>
+                    <h2 class="section-heading__title">اللجنة الرقابية</h2>
+                    <p class="section-heading__description">أعضاء اللجنة الرقابية المكلفون بمتابعة أعمال الصندوق وتعزيز الشفافية والرقابة.</p>
                 </div>
-
 
                 <!-- Team Members -->
-
                 <div class="team-grid">
 
-
                     <!-- Member 5 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__image-wrapper">
-
-                            <img
-                                src="images/team/member-05.jpg"
-                                alt="صورة رئيس اللجنة الرقابية"
-                                class="team-card__image"
-                            >
-
-                     </div>
-
-                        <div class="team-card__content">
-
-                            <h3 class="team-card__name">
-                                اسم العضو
-                            </h3>
-
-                            <p class="team-card__role">
-                                رئيس اللجنة الرقابية
-                            </p>
-
+                    <article class="team-card team-card--supervisory">
+                        <div class="team-card__image-wrapper" data-initials="ع">
+                            <img src="images/team/member-05.svg" alt="صورة رئيس اللجنة الرقابية" class="team-card__image">
                         </div>
-
+                        <div class="team-card__content">
+                            <h3 class="team-card__name">اسم العضو</h3>
+                            <span class="team-card__role">رئيس اللجنة الرقابية</span>
+                            <div class="team-card__social">
+                                <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" aria-label="بريد"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
                     </article>
-
-
 
                     <!-- Member 6 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__image-wrapper">
-
-                            <img
-                                src="images/team/member-06.jpg"
-                                alt="صورة عضو اللجنة الرقابية"
-                                class="team-card__image"
-                            >
-
-                     </div>
-
-                        <div class="team-card__content">
-
-                            <h3 class="team-card__name">
-                                اسم العضو
-                            </h3>
-
-                            <p class="team-card__role">
-                                عضو اللجنة الرقابية
-                            </p>
-
+                    <article class="team-card team-card--supervisory">
+                        <div class="team-card__image-wrapper" data-initials="ع">
+                            <img src="images/team/member-06.svg" alt="صورة عضو اللجنة الرقابية" class="team-card__image">
                         </div>
-
+                        <div class="team-card__content">
+                            <h3 class="team-card__name">اسم العضو</h3>
+                            <span class="team-card__role">عضو اللجنة الرقابية</span>
+                            <div class="team-card__social">
+                                <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" aria-label="بريد"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
                     </article>
-
-
 
                     <!-- Member 7 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__image-wrapper">
-
-                            <img
-                                src="images/team/member-07.jpg"
-                                alt="صورة عضو اللجنة الرقابية"
-                                class="team-card__image"
-                            >
-
-                         </div>
-
-                         <div class="team-card__content">
-
-                            <h3 class="team-card__name">
-                                اسم العضو
-                            </h3>
-
-                            <p class="team-card__role">
-                                عضو اللجنة الرقابية
-                            </p>
-
+                    <article class="team-card team-card--supervisory">
+                        <div class="team-card__image-wrapper" data-initials="ع">
+                            <img src="images/team/member-07.svg" alt="صورة عضو اللجنة الرقابية" class="team-card__image">
                         </div>
-
+                        <div class="team-card__content">
+                            <h3 class="team-card__name">اسم العضو</h3>
+                            <span class="team-card__role">عضو اللجنة الرقابية</span>
+                            <div class="team-card__social">
+                                <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" aria-label="بريد"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
                     </article>
 
-
                 </div>
-
             </div>
-
         </section>
 
-
     </main>
-
-
 
   <footer class="site-footer">
 

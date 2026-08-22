@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b71c1c"/>
+      <stop offset="50%" stop-color="#c62828"/>
+      <stop offset="100%" stop-color="#880e4f"/>
+    </linearGradient>
+    <linearGradient id="gold5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe082"/>
+      <stop offset="100%" stop-color="#ffb300"/>
+    </linearGradient>
+    <radialGradient id="glow5" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg5)"/>
+  <circle cx="200" cy="180" r="160" fill="url(#glow5)"/>
+
+  <circle cx="200" cy="180" r="150" fill="none" stroke="url(#gold5)" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6,6"/>
+  <circle cx="200" cy="180" r="135" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.15"/>
+
+  <!-- Body Formal Attire -->
+  <path d="M 100 400 C 100 310, 140 270, 200 270 C 260 270, 300 310, 300 400 Z" fill="#5a0a0a"/>
+  <path d="M 170 270 L 200 340 L 230 270 Z" fill="#ffffff"/>
+  <path d="M 193 285 L 207 285 L 203 360 L 197 360 Z" fill="#ffb300"/>
+
+  <path d="M 125 400 L 175 270 L 200 310 L 170 400 Z" fill="#7a1212"/>
+  <path d="M 275 400 L 225 270 L 200 310 L 230 400 Z" fill="#7a1212"/>
+
+  <!-- Neck -->
+  <rect x="182" y="225" width="36" height="50" rx="10" fill="#d59a72"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="185" rx="52" ry="62" fill="#e3ab85"/>
+
+  <ellipse cx="146" cy="185" rx="10" ry="16" fill="#d59a72"/>
+  <ellipse cx="254" cy="185" rx="10" ry="16" fill="#d59a72"/>
+
+  <!-- Distinguished Hair / Grey touches -->
+  <path d="M 145 170 C 142 120, 258 120, 255 170 C 255 125, 145 125, 145 170 Z" fill="#3a3a3a"/>
+  <path d="M 146 160 C 150 135, 165 125, 180 130 Z" fill="#b0b0b0"/>
+  <path d="M 254 160 C 250 135, 235 125, 220 130 Z" fill="#b0b0b0"/>
+
+  <!-- Eyebrows & Eyes -->
+  <path d="M 165 168 Q 178 163 188 168" fill="none" stroke="#252525" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 212 168 Q 222 163 235 168" fill="none" stroke="#252525" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="177" cy="180" r="5" fill="#252525"/>
+  <circle cx="223" cy="180" r="5" fill="#252525"/>
+
+  <!-- Beard & Mustache -->
+  <path d="M 172 208 Q 200 218 228 208 Q 200 198 172 208 Z" fill="#3a3a3a"/>
+  <path d="M 178 215 C 180 235, 220 235, 222 215 Z" fill="#3a3a3a"/>
+
+  <!-- Badge at bottom -->
+  <rect x="110" y="355" width="180" height="32" rx="16" fill="#b71c1c" stroke="url(#gold5)" stroke-width="1.5"/>
+  <text x="200" y="376" font-family="'Tajawal', sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">رئيس اللجنة الرقابية</text>
+</svg>
