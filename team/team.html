@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../Index/css/hero.css">
     <link rel="stylesheet" href="../Index/css/footer.css">
     <link rel="stylesheet" href="../Index/css/responsive.css">
+    <link rel="stylesheet" href="../Index/css/cards.css">
 
 </head>
 
@@ -100,24 +101,54 @@
         </div>
     </header>
 
-    <!-- =====================================================
-         URGENT ANNOUNCEMENT TICKER
-    ====================================================== -->
-    <div class="news-ticker">
-        <div class="container">
-            <div class="news-ticker__wrapper">
-                <span class="news-ticker__label">
-                    <i class="fa-solid fa-bullhorn"></i> إعلان هام
-                </span>
-                <p class="news-ticker__text">
-                    تم بحمد الله اكتمال مرحلة حفر البئر الارتوازية وتدشين منظومة الضخ الشمسية بالحي الغربي لقرية المشاوز.
-                    <a href="#featured-article" class="news-ticker__link">التفاصيل والتغطية الكاملة &larr;</a>
-                </p>
-            </div>
-        </div>
-    </div>
+     <!--  =====================================================
+             HERO SECTION
+             Homepage only
+        ====================================================== -->
+        <section class="hero">
 
-    <main>
+            <div class="hero__background">
+                <img src="../Images/index_hero.jpeg" alt="منظر بانورامي لقرية المشاوز">
+            </div>
+
+            <div class="hero__overlay"></div>
+
+            <div class="container">
+
+                <div class="hero__content">
+
+                    <p class="hero__subtitle">
+                        صندوق المشاوز التكافلي التنموي
+                    </p>
+
+                    <h1 class="hero__title">
+                        معًا نبني مستقبل قرية المشاوز
+                    </h1>
+
+                    <p class="hero__description">
+                        صندوق مجتمعي يهدف إلى دعم التنمية والتكافل
+                        الاجتماعي في قرية المشاوز بمحافظة تعز.
+                    </p>
+
+                    <div class="hero__actions">
+
+                        <a href="../contribute/contribute.html" class="btn btn--primary">
+                            ساهم معنا
+                        </a>
+
+                        <a href="../about/about.html" class="btn btn--secondary">
+                            تعرف على الصندوق
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+   
 
 
         <!-- =========================================
@@ -415,83 +446,154 @@
 
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-    <footer class="site-footer">
+  <footer class="site-footer">
+
         <div class="container">
 
             <div class="site-footer__grid">
 
                 <!-- Footer About -->
                 <div class="site-footer__about">
-                    <a href="../Index/index.html" class="site-footer__logo">
-                        <div style="display: flex; align-items: center; gap: 0.6rem;">
-                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #4CAF50, #2E7D32); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1.2rem;">
-                                <i class="fa-solid fa-hands-holding-child"></i>
-                            </div>
-                            <div style="display: flex; flex-direction: column;">
-                                <span style="font-weight: 800; font-size: 1.1rem; color: #FFFFFF; line-height: 1.2;">صندوق المشاوز</span>
-                                <span style="font-size: 0.75rem; color: rgba(250, 250, 250, 0.7); font-weight: 600;">التكافلي التنموي</span>
-                            </div>
-                        </div>
+
+                    <a href="index.html" class="site-footer__logo">
+                        <img src="../Images/logo.png" alt="شعار صندوق المشاوز التكافلي التنموي">
                     </a>
+
                     <p>
-                        صندوق مجتمعي يهدف إلى دعم التنمية المستدامة والتكافل الاجتماعي في قرية المشاوز بمحافظة تعز، اليمن.
+                        صندوق مجتمعي يهدف إلى دعم التنمية والتكافل
+                        الاجتماعي في قرية المشاوز بمحافظة تعز، اليمن.
                     </p>
+
                 </div>
+
 
                 <!-- Quick Links -->
                 <div class="site-footer__links">
-                    <h3>روابط سريعة</h3>
+
+                    <h3>
+                        روابط سريعة
+                    </h3>
+
                     <ul>
-                        <li><a href="../Index/index.html">الرئيسية</a></li>
-                        <li><a href="../about/about.html">عن الصندوق</a></li>
-                        <li><a href="../Index/village.html">عن قرية المشاوز</a></li>
-                        <li><a href="../Index/projects.html">المشاريع التنموية</a></li>
-                        <li><a href="../Solidarity/solidarity.html">المشاريع التكافلية</a></li>
-                        <li><a href="../news/news.html">أخبار القرية</a></li>
-                        <li><a href="../Governence/governence.html">الحوكمة</a></li>
+
+                        <li>
+                            <a href="index.html">
+                                الرئيسية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../about/about.html">
+                                عن الصندوق
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="village.html">
+                                عن قرية المشاوز
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="projects.html">
+                                المشاريع التنموية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="solidarity.html">
+                                المشاريع التكافلية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../../news/news.html">
+                                أخبار القرية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="governance.html">
+                                الحوكمة
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
+
 
                 <!-- Contact Information -->
                 <div class="site-footer__contact">
-                    <h3>تواصل معنا</h3>
+
+                    <h3>
+                        تواصل معنا
+                    </h3>
+
                     <address>
+
                         <p>
                             <strong>الهاتف:</strong>
-                            <a href="tel:780810312">780810312</a>
+                            <a href="tel:780810312">
+                                780810312
+                            </a>
                         </p>
+
                         <p>
                             <strong>البريد الإلكتروني:</strong>
-                            <a href="mailto:info@mashawizfund.org">info@mashawizfund.org</a>
+                            <a href="mailto:info@mashawizfund.org">
+                                info@mashawizfund.org
+                            </a>
                         </p>
-                        <p>
-                            <strong>العنوان:</strong>
-                            قرية المشاوز، محافظة تعز، اليمن
-                        </p>
+
                     </address>
+
                 </div>
+
 
                 <!-- Social Media -->
                 <div class="site-footer__social">
-                    <h3>تابعنا على</h3>
+
+                    <h3>
+                        تابعنا
+                    </h3>
+
                     <div class="social-links">
-                        <a href="#" aria-label="فيسبوك"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                        <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                        <a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i> X</a>
+
+                        <a href="#" aria-label="فيسبوك">
+                            Facebook
+                        </a>
+
+                        <a href="#" aria-label="واتساب">
+                            WhatsApp
+                        </a>
+
+                        <a href="#" aria-label="تويتر">
+                            X
+                        </a>
+
                     </div>
+
                 </div>
 
             </div>
 
+
             <!-- Footer Bottom -->
             <div class="site-footer__bottom">
+
                 <p>
-                    جميع الحقوق محفوظة © 2026 صندوق المشاوز التكافلي التنموي
+                    جميع الحقوق محفوظة © صندوق المشاوز التكافلي التنموي
                 </p>
+
             </div>
 
         </div>
+
     </footer>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
