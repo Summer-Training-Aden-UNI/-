@@ -12,20 +12,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Choose Tajawal or Cairo according to the project design -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <!-- Main Stylesheet -->
-     <link rel="stylesheet" href="about.css">
-     
+    <!-- Main Stylesheet (shared across the whole site) -->
     <link rel="stylesheet" href="../Index/css/main.css">
     <link rel="stylesheet" href="../Index/css/header.css">
     <link rel="stylesheet" href="../Index/css/footer.css">
+    <link rel="stylesheet" href="../Index/css/hero.css">
+    <link rel="stylesheet" href="../Index/css/cards.css">
     <link rel="stylesheet" href="../Index/css/responsive.css">
 </head>
-  
+
 <body>
 
     <!-- =====================================================
@@ -36,24 +33,18 @@
 
         <div class="container">
 
-           <!-- Logo -->
+            <!-- Logo -->
             <a href="index.html" class="site-header__logo">
-                <img
-                    src="../Images/logo.png"
-                    alt="شعار صندوق المشاوز التكافلي التنموي"
-                >
+                <img src="../Images/logo.png" alt="شعار صندوق المشاوز التكافلي التنموي">
             </a>
 
-            <!-- Mobile Menu Button -->
-            <button
-                class="site-header__menu-toggle"
-                type="button"
-                aria-label="فتح القائمة"
-            >
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="menu-toggle" class="site-header__menu-checkbox" aria-label="فتح القائمة">
+            <label for="menu-toggle" class="site-header__menu-toggle" aria-label="فتح القائمة">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+            </label>
 
             <!-- Main Navigation -->
             <nav class="site-header__nav" aria-label="القائمة الرئيسية">
@@ -129,186 +120,284 @@
 
 
 
-<main>
+    <main>
 
-    <!-- About Hero -->
-    <section class="about-hero">
-        <div class="container">
-            <h1>عن الصندوق</h1>
-            <p>
-                صندوق المشاوز التكافلي التنموي
-            </p>
-        </div>
-    </section>
+        <!-- =====================================================
+             PAGE HERO
+             Shared .page-hero from hero.css — reused across all
+             
+        ====================================================== -->
+        <section class="page-hero">
 
+            <div class="container">
 
-    <!-- About Introduction -->
-    <section class="about-intro">
-        <div class="container">
-
-            <div class="section-title">
-                <span>من نحن</span>
-                <h2>عن صندوق المشاوز التكافلي التنموي</h2>
-            </div>
-
-            <div class="about-intro__content">
-                <p>
-                    صندوق المشاوز التكافلي التنموي هو صندوق مجتمعي
-                    يهدف إلى دعم التنمية والتكافل الاجتماعي في قرية
-                    المشاوز بمحافظة تعز، اليمن.
+                <p class="page-hero__label">
+                    من نحن
                 </p>
 
-                <p>
-                    يعمل الصندوق على دعم المبادرات والمشاريع التي
-                    تساهم في تحسين حياة أفراد المجتمع وتعزيز التعاون
-                    والتكافل بين أبناء القرية.
+                <h1 class="page-hero__title">
+                    عن الصندوق
+                </h1>
+
+                <p class="page-hero__description">
+                    صندوق المشاوز التكافلي التنموي
                 </p>
+
             </div>
 
-        </div>
-    </section>
+        </section>
 
 
-    <!-- Vision & Mission -->
-    <section class="vision-mission">
-        <div class="container">
+        <!-- =====================================================
+             ABOUT INTRODUCTION
+             Reuses .about-preview from cards.css
+        ====================================================== -->
+        <section class="about-preview">
 
-            <div class="section-title">
-                <span>هدفنا</span>
-                <h2>رؤيتنا ورسالتنا</h2>
-            </div>
+            <div class="container">
 
-            <div class="vision-mission__grid">
+                <div class="section-heading">
 
-                <!-- Vision -->
-                <article class="info-card">
-                    <div class="info-card__icon">
-                        👁
+                    <span class="section-heading__label">
+                        من نحن
+                    </span>
+
+                    <h2 class="section-heading__title">
+                        عن صندوق المشاوز التكافلي التنموي
+                    </h2>
+
+                </div>
+
+                <div class="about-preview__content">
+
+                    <div class="about-preview__text">
+
+                        <p>
+                            صندوق المشاوز التكافلي التنموي هو صندوق مجتمعي
+                            يهدف إلى دعم التنمية والتكافل الاجتماعي في قرية
+                            المشاوز بمحافظة تعز، اليمن.
+                        </p>
+
+                        <p>
+                            يعمل الصندوق على دعم المبادرات والمشاريع التي
+                            تساهم في تحسين حياة أفراد المجتمع وتعزيز التعاون
+                            والتكافل بين أبناء القرية.
+                        </p>
+
                     </div>
 
-                    <h3>رؤيتنا</h3>
-
-                    <p>
-                        بناء مجتمع متكافل ومستدام يشارك أفراده
-                        في التنمية ويساهمون في تحسين مستوى الحياة
-                        في القرية.
-                    </p>
-                </article>
-
-
-                <!-- Mission -->
-                <article class="info-card">
-                    <div class="info-card__icon">
-                        🤝
-                    </div>
-
-                    <h3>رسالتنا</h3>
-
-                    <p>
-                        دعم المشاريع والمبادرات التنموية والتكافلية
-                        وتعزيز التعاون والمشاركة المجتمعية بين أبناء
-                        قرية المشاوز.
-                    </p>
-                </article>
+                </div>
 
             </div>
 
-        </div>
-    </section>
+        </section>
 
 
-    <!-- Goals -->
-    <section class="goals">
-        <div class="container">
+        <!-- =====================================================
+             VISION & MISSION
+             Reuses .solidarity-preview (bg + padding), .news-grid
+             (2-col layout) and .team-card (card shell) from cards.css
+        ====================================================== -->
+        <section class="solidarity-preview">
 
-            <div class="section-title">
-                <span>ما نسعى إليه</span>
-                <h2>أهداف الصندوق</h2>
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-heading__label">
+                        هدفنا
+                    </span>
+
+                    <h2 class="section-heading__title">
+                        رؤيتنا ورسالتنا
+                    </h2>
+
+                </div>
+
+                <div class="news-grid">
+
+                    <!-- Vision -->
+                    <article class="team-card">
+
+                        <div class="stat-card__number">
+                            👁
+                        </div>
+
+                        <h3 class="project-card__title">
+                            رؤيتنا
+                        </h3>
+
+                        <p class="project-card__description">
+                            بناء مجتمع متكافل ومستدام يشارك أفراده
+                            في التنمية ويساهمون في تحسين مستوى الحياة
+                            في القرية.
+                        </p>
+
+                    </article>
+
+                    <!-- Mission -->
+                    <article class="team-card">
+
+                        <div class="stat-card__number">
+                            🤝
+                        </div>
+
+                        <h3 class="project-card__title">
+                            رسالتنا
+                        </h3>
+
+                        <p class="project-card__description">
+                            دعم المشاريع والمبادرات التنموية والتكافلية
+                            وتعزيز التعاون والمشاركة المجتمعية بين أبناء
+                            قرية المشاوز.
+                        </p>
+
+                    </article>
+
+                </div>
+
             </div>
 
-            <div class="goals__grid">
-
-                <!-- Goal 1 -->
-                <article class="goal-card">
-                    <span class="goal-card__number">01</span>
-
-                    <h3>دعم التنمية</h3>
-
-                    <p>
-                        دعم المشاريع التنموية التي تساهم في تحسين
-                        الخدمات والبنية الأساسية في القرية.
-                    </p>
-                </article>
+        </section>
 
 
-                <!-- Goal 2 -->
-                <article class="goal-card">
-                    <span class="goal-card__number">02</span>
+        <!-- =====================================================
+             GOALS
+             Reuses .team-preview (padding), .team-grid (4-col,
+             already responsive) and .team-card from cards.css
+        ====================================================== -->
+        <section class="team-preview">
 
-                    <h3>تعزيز التكافل</h3>
+            <div class="container">
 
-                    <p>
-                        تعزيز روح التكافل الاجتماعي ومساعدة الأسر
-                        والأفراد المحتاجين في المجتمع.
-                    </p>
-                </article>
+                <div class="section-heading">
 
+                    <span class="section-heading__label">
+                        ما نسعى إليه
+                    </span>
 
-                <!-- Goal 3 -->
-                <article class="goal-card">
-                    <span class="goal-card__number">03</span>
+                    <h2 class="section-heading__title">
+                        أهداف الصندوق
+                    </h2>
 
-                    <h3>دعم المبادرات</h3>
+                </div>
 
-                    <p>
-                        تشجيع ودعم المبادرات المجتمعية التي تحقق
-                        أثراً إيجابياً ومستداماً.
-                    </p>
-                </article>
+                <div class="team-grid">
 
+                    <!-- Goal 1 -->
+                    <article class="team-card">
 
-                <!-- Goal 4 -->
-                <article class="goal-card">
-                    <span class="goal-card__number">04</span>
+                        <div class="stat-card__number">
+                            01
+                        </div>
 
-                    <h3>المشاركة المجتمعية</h3>
+                        <h3 class="project-card__title">
+                            دعم التنمية
+                        </h3>
 
-                    <p>
-                        تشجيع أبناء المجتمع على المشاركة في المشاريع
-                        والمبادرات التنموية والتكافلية.
-                    </p>
-                </article>
+                        <p class="project-card__description">
+                            دعم المشاريع التنموية التي تساهم في تحسين
+                            الخدمات والبنية الأساسية في القرية.
+                        </p>
+
+                    </article>
+
+                    <!-- Goal 2 -->
+                    <article class="team-card">
+
+                        <div class="stat-card__number">
+                            02
+                        </div>
+
+                        <h3 class="project-card__title">
+                            تعزيز التكافل
+                        </h3>
+
+                        <p class="project-card__description">
+                            تعزيز روح التكافل الاجتماعي ومساعدة الأسر
+                            والأفراد المحتاجين في المجتمع.
+                        </p>
+
+                    </article>
+
+                    <!-- Goal 3 -->
+                    <article class="team-card">
+
+                        <div class="stat-card__number">
+                            03
+                        </div>
+
+                        <h3 class="project-card__title">
+                            دعم المبادرات
+                        </h3>
+
+                        <p class="project-card__description">
+                            تشجيع ودعم المبادرات المجتمعية التي تحقق
+                            أثراً إيجابياً ومستداماً.
+                        </p>
+
+                    </article>
+
+                    <!-- Goal 4 -->
+                    <article class="team-card">
+
+                        <div class="stat-card__number">
+                            04
+                        </div>
+
+                        <h3 class="project-card__title">
+                            المشاركة المجتمعية
+                        </h3>
+
+                        <p class="project-card__description">
+                            تشجيع أبناء المجتمع على المشاركة في المشاريع
+                            والمبادرات التنموية والتكافلية.
+                        </p>
+
+                    </article>
+
+                </div>
 
             </div>
 
-        </div>
-    </section>
+        </section>
 
 
-    <!-- Call To Action -->
-    <section class="about-cta">
-        <div class="container">
+        <!-- =====================================================
+             CONTRIBUTE CTA
+             Reuses .contribute-cta from cards.css (same as homepage)
+        ====================================================== -->
+        <section class="contribute-cta">
 
-            <h2>معاً من أجل مجتمع أفضل</h2>
+            <div class="container">
 
-            <p>
-                ساهم معنا في دعم التنمية والتكافل الاجتماعي
-                في قرية المشاوز.
-            </p>
+                <div class="contribute-cta__content">
 
-            <a href="../contribute.html" class="btn">
-                ساهم معنا
-            </a>
+                    <h2>
+                        معًا من أجل مجتمع أفضل
+                    </h2>
 
-        </div>
-    </section>
+                    <p>
+                        ساهم معنا في دعم التنمية والتكافل الاجتماعي
+                        في قرية المشاوز.
+                    </p>
 
-</main>
+                    <a href="../contribute.html" class="btn btn--accent">
+                        ساهم معنا
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 
 
 
-         <!-- =====================================================
+    <!-- =====================================================
          FOOTER
          Shared across all pages
     ====================================================== -->
@@ -321,14 +410,8 @@
                 <!-- Footer About -->
                 <div class="site-footer__about">
 
-                    <a
-                        href="../Index/index.html"
-                        class="site-footer__logo"
-                    >
-                        <img
-                            src="../images/logo.png"
-                            alt="شعار صندوق المشاوز التكافلي التنموي"
-                        >
+                    <a href="../Index/index.html" class="site-footer__logo">
+                        <img src="../images/logo.png" alt="شعار صندوق المشاوز التكافلي التنموي">
                     </a>
 
                     <p>
@@ -432,24 +515,15 @@
 
                     <div class="social-links">
 
-                        <a
-                            href="#"
-                            aria-label="فيسبوك"
-                        >
+                        <a href="#" aria-label="فيسبوك">
                             Facebook
                         </a>
 
-                        <a
-                            href="#"
-                            aria-label="واتساب"
-                        >
+                        <a href="#" aria-label="واتساب">
                             WhatsApp
                         </a>
 
-                        <a
-                            href="#"
-                            aria-label="تويتر"
-                        >
+                        <a href="#" aria-label="تويتر">
                             X
                         </a>
 
