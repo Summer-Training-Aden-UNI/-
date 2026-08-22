@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00695c"/>
+      <stop offset="50%" stop-color="#00897b"/>
+      <stop offset="100%" stop-color="#004d40"/>
+    </linearGradient>
+    <linearGradient id="gold3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe082"/>
+      <stop offset="100%" stop-color="#ffb300"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg3)"/>
+  <circle cx="200" cy="180" r="160" fill="url(#glow3)"/>
+
+  <circle cx="200" cy="180" r="150" fill="none" stroke="url(#gold3)" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6,6"/>
+  <circle cx="200" cy="180" r="135" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.15"/>
+
+  <!-- Body Jacket -->
+  <path d="M 100 400 C 100 310, 140 270, 200 270 C 260 270, 300 310, 300 400 Z" fill="#00332c"/>
+  <path d="M 170 270 L 200 340 L 230 270 Z" fill="#ffffff"/>
+  <path d="M 193 285 L 207 285 L 203 360 L 197 360 Z" fill="#00897b"/>
+
+  <path d="M 125 400 L 175 270 L 200 310 L 170 400 Z" fill="#004d40"/>
+  <path d="M 275 400 L 225 270 L 200 310 L 230 400 Z" fill="#004d40"/>
+
+  <!-- Neck -->
+  <rect x="182" y="225" width="36" height="50" rx="10" fill="#d09670"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="185" rx="52" ry="62" fill="#dea882"/>
+
+  <ellipse cx="146" cy="185" rx="10" ry="16" fill="#d09670"/>
+  <ellipse cx="254" cy="185" rx="10" ry="16" fill="#d09670"/>
+
+  <!-- Modern Hair Style -->
+  <path d="M 145 170 C 142 120, 258 120, 255 170 C 255 125, 145 125, 145 170 Z" fill="#252525"/>
+  <path d="M 148 145 C 170 120, 230 120, 252 145 Z" fill="#3a3a3a"/>
+
+  <!-- Eyebrows & Eyes -->
+  <path d="M 165 168 Q 178 163 188 168" fill="none" stroke="#252525" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 212 168 Q 222 163 235 168" fill="none" stroke="#252525" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="177" cy="180" r="5" fill="#252525"/>
+  <circle cx="223" cy="180" r="5" fill="#252525"/>
+
+  <!-- Smile & Mustache -->
+  <path d="M 174 205 Q 200 213 226 205 Q 200 198 174 205 Z" fill="#252525"/>
+  <path d="M 183 216 Q 200 224 217 216" fill="none" stroke="#252525" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Badge at bottom -->
+  <rect x="110" y="355" width="180" height="32" rx="16" fill="#004d40" stroke="url(#gold3)" stroke-width="1.5"/>
+  <text x="200" y="376" font-family="'Tajawal', sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">عضو الهيئة الإدارية</text>
+</svg>
