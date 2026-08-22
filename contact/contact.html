@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>صندوق المشاوز التكافلي التنموي</title>
+    <title> تواصل معنا | صندوق المشاوز التكافلي التنموي </title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,13 +17,13 @@
         rel="stylesheet"
     >
 
-    <!-- Main Stylesheet -->
-     <link rel="stylesheet" href="contact.css">
-
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+       <!-- Main Stylesheet (shared across the whole site) -->
+    <link rel="stylesheet" href="../Index/css/main.css">
+    <link rel="stylesheet" href="../Index/css/header.css">
+    <link rel="stylesheet" href="../Index/css/footer.css">
+    <link rel="stylesheet" href="../Index/css/hero.css">
+    <link rel="stylesheet" href="../Index/css/cards.css">
+    <link rel="stylesheet" href="../Index/css/responsive.css">
 </head>
   
 <body>
@@ -37,23 +37,20 @@
         <div class="container">
 
             <!-- Logo -->
-            <a href="../index.html" class="site-header__logo">
+            <a href="../Index/index.html" class="site-header__logo">
                 <img
-                    src="images/logo.png"
+                    src="../Images/logo.png"
                     alt="شعار صندوق المشاوز التكافلي التنموي"
                 >
             </a>
 
-            <!-- Mobile Menu Button -->
-            <button
-                class="site-header__menu-toggle"
-                type="button"
-                aria-label="فتح القائمة"
-            >
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="menu-toggle" class="site-header__menu-checkbox" aria-label="فتح القائمة">
+            <label for="menu-toggle" class="site-header__menu-toggle" aria-label="فتح القائمة">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+            </label>
 
             <!-- Main Navigation -->
             <nav class="site-header__nav" aria-label="القائمة الرئيسية">
@@ -61,7 +58,7 @@
                 <ul class="site-header__nav-list">
 
                     <li class="site-header__nav-item">
-                        <a href="../index.html">الرئيسية</a>
+                        <a href="../Index/index.html">الرئيسية</a>
                     </li>
 
                     <li class="site-header__nav-item">
@@ -98,11 +95,11 @@
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="../news.html">أخبار القرية</a>
+                        <a href="../news/news.html">أخبار القرية</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="../team.html">فريق العمل</a>
+                        <a href="../team/team.html">فريق العمل</a>
                     </li>
 
                     <li class="site-header__nav-item">
@@ -110,7 +107,7 @@
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="../contact.html">تواصل معنا</a>
+                        <a href="../contact/contact.html">تواصل معنا</a>
                     </li>
 
                 </ul>
@@ -118,7 +115,7 @@
             </nav>
 
             <!-- Main CTA -->
-            <a href="../contribute.html" class="btn btn--primary">
+            <a href="../contribute/contribute.html" class="btn btn--primary">
                 ساهم معنا
             </a>
 
@@ -130,24 +127,25 @@
 <main>
 
     <!-- =====================================================
-         CONTACT HERO
+         PAGE HERO
+         Shared .page-hero from hero.css
     ====================================================== -->
-    <section class="contact-hero">
+    <section class="page-hero">
 
         <div class="container">
 
-            <div class="section-title">
-                <span>تواصل معنا</span>
+            <p class="page-hero__label">
+                تواصل معنا
+            </p>
 
-                <h1>
-                    نحن هنا للاستماع إليكم
-                </h1>
+            <h1 class="page-hero__title">
+                نحن هنا للاستماع إليكم
+            </h1>
 
-                <p>
-                    يمكنك التواصل مع صندوق المشاوز التكافلي التنموي
-                    للاستفسار أو تقديم المقترحات والملاحظات.
-                </p>
-            </div>
+            <p class="page-hero__description">
+                يمكنك التواصل مع صندوق المشاوز التكافلي التنموي
+                للاستفسار أو تقديم المقترحات والملاحظات.
+            </p>
 
         </div>
 
@@ -156,90 +154,88 @@
 
     <!-- =====================================================
          CONTACT SECTION
+         Reuses .team-preview (padding), .news-grid (2-col
+         layout), .team-card (card shell) and the shared
+         .form-group fields from main.css
     ====================================================== -->
-    <section class="contact">
+    <section class="team-preview">
 
         <div class="container">
 
-            <div class="contact__grid">
+            <div class="news-grid">
 
 
                 <!-- =================================================
                      CONTACT INFORMATION
                 ================================================== -->
-                <div class="contact__info">
+                <div>
 
-                    <div class="section-title">
-                        <span>معلومات التواصل</span>
+                    <div class="section-heading">
 
-                        <h2>
+                        <span class="section-heading__label">
+                            معلومات التواصل
+                        </span>
+
+                        <h2 class="section-heading__title">
                             بيانات التواصل
                         </h2>
+
                     </div>
 
+                    <div class="info-list">
 
-                    <!-- Phone -->
-                    <div class="contact-card">
+                        <!-- Phone -->
+                        <article class="team-card">
 
-                        <div class="contact-card__icon">
-                            ☎
-                        </div>
+                            <div class="stat-card__number">
+                                ☎
+                            </div>
 
-                        <div class="contact-card__content">
-
-                            <h3>
+                            <h3 class="project-card__title">
                                 الهاتف
                             </h3>
 
-                            <a href="tel:780810312">
+                            <a href="tel:780810312" class="project-card__link">
                                 780810312
                             </a>
 
-                        </div>
-
-                    </div>
+                        </article>
 
 
-                    <!-- Email -->
-                    <div class="contact-card">
+                        <!-- Email -->
+                        <article class="team-card">
 
-                        <div class="contact-card__icon">
-                            ✉
-                        </div>
+                            <div class="stat-card__number">
+                                ✉
+                            </div>
 
-                        <div class="contact-card__content">
-
-                            <h3>
+                            <h3 class="project-card__title">
                                 البريد الإلكتروني
                             </h3>
 
-                            <a href="mailto:info@mashawizfund.org">
+                            <a href="mailto:info@mashawizfund.org" class="project-card__link">
                                 info@mashawizfund.org
                             </a>
 
-                        </div>
-
-                    </div>
+                        </article>
 
 
-                    <!-- Location -->
-                    <div class="contact-card">
+                        <!-- Location -->
+                        <article class="team-card">
 
-                        <div class="contact-card__icon">
-                            📍
-                        </div>
+                            <div class="stat-card__number">
+                                📍
+                            </div>
 
-                        <div class="contact-card__content">
-
-                            <h3>
+                            <h3 class="project-card__title">
                                 الموقع
                             </h3>
 
-                            <p>
+                            <p class="project-card__description">
                                 قرية المشاوز – محافظة تعز – اليمن
                             </p>
 
-                        </div>
+                        </article>
 
                     </div>
 
@@ -249,15 +245,15 @@
                 <!-- =================================================
                      CONTACT FORM
                 ================================================== -->
-                <div class="contact__form">
+                <div>
 
-                    <div class="section-title">
+                    <div class="section-heading">
 
-                        <span>
+                        <span class="section-heading__label">
                             أرسل لنا رسالة
                         </span>
 
-                        <h2>
+                        <h2 class="section-heading__title">
                             نموذج التواصل
                         </h2>
 
@@ -377,26 +373,28 @@
 
     <!-- =====================================================
          CONTACT CTA
+         Reuses .contribute-cta from cards.css
     ====================================================== -->
-    <section class="contact-cta">
+    <section class="contribute-cta">
 
         <div class="container">
 
-            <h2>
-                مساهمتكم تصنع الفرق
-            </h2>
+            <div class="contribute-cta__content">
 
-            <p>
-                شاركونا أفكاركم ومقترحاتكم لدعم التنمية والتكافل
-                في قرية المشاوز.
-            </p>
+                <h2>
+                    مساهمتكم تصنع الفرق
+                </h2>
 
-            <a
-                href="contribute.html"
-                class="btn btn--primary"
-            >
-                ساهم معنا
-            </a>
+                <p>
+                    شاركونا أفكاركم ومقترحاتكم لدعم التنمية والتكافل
+                    في قرية المشاوز.
+                </p>
+
+                <a href="../contribute/contribute.html" class="btn btn--accent">
+                    ساهم معنا
+                </a>
+
+            </div>
 
         </div>
 
@@ -428,7 +426,7 @@
                 <div class="site-footer__about">
 
                     <a
-                        href="../index.html"
+                        href="../Index/index.html"
                         class="site-footer__logo"
                     >
                         <img
@@ -455,13 +453,13 @@
                     <ul>
 
                         <li>
-                            <a href="../index.html">
+                            <a href="../Index/index.html">
                                 الرئيسية
                             </a>
                         </li>
 
                         <li>
-                            <a href="..//About/about.html">
+                            <a href="../about/about.html">
                                 عن الصندوق
                             </a>
                         </li>
@@ -485,7 +483,7 @@
                         </li>
 
                         <li>
-                            <a href="../news.html">
+                            <a href="../news/news.html/">
                                 أخبار القرية
                             </a>
                         </li>

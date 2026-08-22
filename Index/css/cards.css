@@ -4,6 +4,20 @@
 ========================================================= */
 
 
+
+/* =========================================================
+   INFO LIST
+   Generic vertical stack of icon cards — reusable anywhere
+   a short list of details is needed (contact info, etc.)
+========================================================= */
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.25rem;
+}
+
 /* =========================================================
    STATISTICS
 ========================================================= */
