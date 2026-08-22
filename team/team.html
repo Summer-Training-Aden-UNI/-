@@ -1,6 +1,5 @@
-```html
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+ <!DOCTYPE html>
+ <html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -9,9 +8,7 @@
 
     <title>فريق العمل | صندوق المشاوز التكافلي التنموي</title>
 
-    <!-- =========================
-         Google Font - Tajawal
-    ========================== -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -20,27 +17,17 @@
         rel="stylesheet"
     >
 
-    <!-- =========================
-         CSS Files
-    ========================== -->
-
-    <!-- Global styles -->
-    <link rel="stylesheet" href="../news/css/main(news).css">
-
-    <!-- Header -->
-    <link rel="stylesheet" href="../team/css/header.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href=". ./Index/css/main.css">
 
     <!-- Team Hero -->
-    <link rel="stylesheet" href="../news/css/hero(news).css">
+    <link rel="stylesheet" href="../Index/css/hero.css">
 
-    <!-- Team Main Content -->
-    <link rel="stylesheet" href="css/team-main.css">
-
-    <!-- Footer -->
-    <link rel="stylesheet" href="../team/css/footer.css">
+    <!-- Team Main -->
+    <link rel="stylesheet" href="../Index/css/header.css">
 
     <!-- Responsive -->
-    <link rel="stylesheet" href="css/team-responsive.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -48,218 +35,99 @@
 <body>
 
 
-    <!-- =================================
+    <!-- =========================================
          HEADER
-    ================================== -->
+    ========================================== -->
 
-    <header class="site-header">
+          <header class="site-header">
+        <div class="container">
 
-        <div class="container header__container">
-
-
-            <!-- Logo -->
-
+             <!-- Logo -->
             <a href="index.html" class="site-header__logo">
-
-                <img
-                    src="images/logo.png"
+                 <img
+                    src="../Images/logo.png"
                     alt="شعار صندوق المشاوز التكافلي التنموي"
                 >
-
             </a>
 
 
-            <!-- Navigation -->
+            <!-- Mobile Menu Toggle -->
+            <button class="site-header__menu-toggle" type="button" aria-label="فتح القائمة" id="menuToggleBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <nav class="main-nav" aria-label="القائمة الرئيسية">
-
-                <ul class="main-nav__list">
-
-
-                    <li class="main-nav__item">
-                        <a href="index.html">
-                            الرئيسية
-                        </a>
+            <!-- Main Navigation -->
+            <nav class="site-header__nav" id="mainNav" aria-label="القائمة الرئيسية">
+                <ul class="site-header__nav-list">
+                    <li class="site-header__nav-item">
+                        <a href="../-/Index/index.html">الرئيسية</a>
                     </li>
-
-
-                    <li class="main-nav__item">
-                        <a href="about.html">
-                            عن الصندوق
-                        </a>
+                    <li class="site-header__nav-item">
+                        <a href="about.html">عن الصندوق</a>
                     </li>
-
-
-                    <li class="main-nav__item">
-                        <a href="village.html">
-                            عن قرية المشاوز
-                        </a>
+                    <li class="site-header__nav-item">
+                        <a href="village.html">عن قرية المشاوز</a>
                     </li>
-
-
-                    <!-- Projects -->
-
-                    <li class="main-nav__item main-nav__dropdown">
-
-                        <a href="projects.html">
-                            المشاريع
-
-                            <span aria-hidden="true">
-                                ▾
-                            </span>
-                        </a>
-
-
-                        <ul class="main-nav__submenu">
-
-                            <li>
-                                <a href="projects.html">
-                                    المشاريع التنموية
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="solidarity.html">
-                                    المشاريع التكافلية
-                                </a>
-                            </li>
-
-                        </ul>
-
+                    <li class="site-header__nav-item site-header__nav-item--dropdown" id="projectsDropdown">
+                        <a href="projects.html">المشاريع</a>
+                        <ul class="site-header__dropdown">
+                            <li><a href="projects.html">المشاريع التنموية</a></li>
+                            <li><a href="solidarity.html">المشاريع التكافلية</a></li>
+                         </ul>
                     </li>
-
-
-                    <li class="main-nav__item">
-
-                        <a href="news.html">
-                            أخبار القرية
-                        </a>
-
+                    <li class="site-header__nav-item">
+                        <a href="news.html" style="color: var(--primary-color); font-weight: 700; background-color: var(--primary-soft);">أخبار القرية</a>
                     </li>
-
-
-                    <!-- Active Page -->
-
-                    <li class="main-nav__item">
-
-                        <a
-                            href="team.html"
-                            class="active"
-                            aria-current="page"
-                        >
-                            فريق العمل
-                        </a>
-
+                    <li class="site-header__nav-item">
+                        <a href="team.html">فريق العمل</a>
                     </li>
-
-
-                    <li class="main-nav__item">
-
-                        <a href="governance.html">
-                            الحوكمة
-                        </a>
-
+                    <li class="site-header__nav-item">
+                        <a href="governance.html">الحوكمة</a>
                     </li>
-
-
-                    <li class="main-nav__item">
-
-                        <a href="contact.html">
-                            تواصل معنا
-                        </a>
-
+                    <li class="site-header__nav-item">
+                        <a href="contact.html">تواصل معنا</a>
                     </li>
-
-                </ul>
-
+                 </ul>
             </nav>
 
-
-            <!-- CTA -->
-
-            <a
-                href="contribute.html"
-                class="header__cta"
-            >
+            <!-- CTA Button -->
+            <a href="contribute.html" class="btn btn--primary">
+                <i class="fa-solid fa-hand-holding-heart"></i>
                 ساهم معنا
             </a>
 
-
-        </div>
-
+  
+  
+      </div>
     </header>
 
-
-
-    <!-- =================================
-         MAIN
-    ================================== -->
+    <!-- =====================================================
+         URGENT ANNOUNCEMENT TICKER
+    ====================================================== -->
+    <div class="news-ticker">
+        <div class="container">
+            <div class="news-ticker__wrapper">
+                <span class="news-ticker__label">
+                    <i class="fa-solid fa-bullhorn"></i> إعلان هام
+                </span>
+                <p class="news-ticker__text">
+                    تم بحمد الله اكتمال مرحلة حفر البئر الارتوازية وتدشين منظومة الضخ الشمسية بالحي الغربي لقرية المشاوز.
+                    <a href="#featured-article" class="news-ticker__link">التفاصيل والتغطية الكاملة &larr;</a>
+                </p>
+            </div>
+        </div>
+    </div>
 
     <main>
 
 
-        <!-- =================================
-             TEAM HERO
-        ================================== -->
-
-        <section class="team-hero">
-
-            <div class="container team-hero__content">
-
-
-                <span class="team-hero__badge">
-                    فريقنا
-                </span>
-
-
-                <h1 class="team-hero__title">
-                    فريق العمل
-                </h1>
-
-
-                <p class="team-hero__description">
-
-                    تعرف على أعضاء الفريق المسؤولين عن إدارة
-                    أعمال صندوق المشاوز التكافلي التنموي
-                    ومتابعة برامجه ومشاريعه.
-
-                </p>
-
-
-                <!-- Breadcrumb -->
-
-                <nav
-                    class="team-hero__breadcrumb"
-                    aria-label="مسار التنقل"
-                >
-
-                    <a href="index.html">
-                        الرئيسية
-                    </a>
-
-                    <span aria-hidden="true">
-                        /
-                    </span>
-
-                    <span>
-                        فريق العمل
-                    </span>
-
-                </nav>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================
+        <!-- =========================================
              ADMINISTRATIVE BOARD
-        ================================== -->
+        ========================================== -->
 
-        <section class="team-section">
-
+      <section class="team-section">
 
             <div class="container">
 
@@ -270,31 +138,26 @@
 
                     <span class="section-heading__subtitle">
                         إدارة الصندوق
-                    </span>
-
+                   </span>
 
                     <h2 class="section-heading__title">
                         الهيئة الإدارية
-                    </h2>
-
+                   </h2>
 
                     <p class="section-heading__description">
-
-                        أعضاء الهيئة الإدارية الذين يساهمون
-                        في إدارة وتنظيم أعمال الصندوق وبرامجه.
-
+                        أعضاء الهيئة الإدارية الذين يساهمون في إدارة
+                        وتنظيم أعمال الصندوق وبرامجه.
                     </p>
 
                 </div>
 
 
-
-                <!-- Team Grid -->
+                <!-- Team Members -->
 
                 <div class="team-grid">
 
 
-                    <!-- Member 01 -->
+                    <!-- Member 1 -->
 
                     <article class="team-card">
 
@@ -306,8 +169,7 @@
                                 class="team-card__image"
                             >
 
-                        </div>
-
+                       </div>
 
                         <div class="team-card__content">
 
@@ -325,7 +187,7 @@
 
 
 
-                    <!-- Member 02 -->
+                    <!-- Member 2 -->
 
                     <article class="team-card">
 
@@ -337,8 +199,7 @@
                                 class="team-card__image"
                             >
 
-                        </div>
-
+                     </div>
 
                         <div class="team-card__content">
 
@@ -356,7 +217,7 @@
 
 
 
-                    <!-- Member 03 -->
+                    <!-- Member 3 -->
 
                     <article class="team-card">
 
@@ -368,8 +229,7 @@
                                 class="team-card__image"
                             >
 
-                        </div>
-
+                     </div>
 
                         <div class="team-card__content">
 
@@ -387,7 +247,7 @@
 
 
 
-                    <!-- Member 04 -->
+                    <!-- Member 4 -->
 
                     <article class="team-card">
 
@@ -399,8 +259,7 @@
                                 class="team-card__image"
                             >
 
-                        </div>
-
+                     </div>
 
                         <div class="team-card__content">
 
@@ -425,12 +284,11 @@
 
 
 
-        <!-- =================================
+        <!-- =========================================
              SUPERVISORY COMMITTEE
-        ================================== -->
+        ========================================== -->
 
-        <section class="team-section team-section--alternate">
-
+      <section class="team-section team-section--alternate">
 
             <div class="container">
 
@@ -441,32 +299,26 @@
 
                     <span class="section-heading__subtitle">
                         الرقابة والمتابعة
-                    </span>
-
+                  </span>
 
                     <h2 class="section-heading__title">
                         اللجنة الرقابية
-                    </h2>
-
+                  </h2>
 
                     <p class="section-heading__description">
-
-                        أعضاء اللجنة الرقابية المكلفون
-                        بمتابعة أعمال الصندوق وتعزيز
-                        الشفافية والرقابة.
-
+                        أعضاء اللجنة الرقابية المكلفون بمتابعة أعمال
+                        الصندوق وتعزيز الشفافية والرقابة.
                     </p>
 
                 </div>
 
 
-
-                <!-- Team Grid -->
+                <!-- Team Members -->
 
                 <div class="team-grid">
 
 
-                    <!-- Member 05 -->
+                    <!-- Member 5 -->
 
                     <article class="team-card">
 
@@ -478,8 +330,7 @@
                                 class="team-card__image"
                             >
 
-                        </div>
-
+                     </div>
 
                         <div class="team-card__content">
 
@@ -497,7 +348,7 @@
 
 
 
-                    <!-- Member 06 -->
+                    <!-- Member 6 -->
 
                     <article class="team-card">
 
@@ -509,8 +360,7 @@
                                 class="team-card__image"
                             >
 
-                        </div>
-
+                     </div>
 
                         <div class="team-card__content">
 
@@ -528,7 +378,7 @@
 
 
 
-                    <!-- Member 07 -->
+                    <!-- Member 7 -->
 
                     <article class="team-card">
 
@@ -540,10 +390,9 @@
                                 class="team-card__image"
                             >
 
-                        </div>
+                         </div>
 
-
-                        <div class="team-card__content">
+                         <div class="team-card__content">
 
                             <h3 class="team-card__name">
                                 اسم العضو
@@ -569,80 +418,84 @@
 
 
 
-    <!-- =================================
+    <!-- =========================================
          FOOTER
-    ================================== -->
+    ========================================== -->
 
-    <footer class="site-footer">
-
+  <footer class="site-footer">
         <div class="container">
 
+            <div class="site-footer__grid">
 
-            <div class="site-footer__content">
-
-
-                <!-- About -->
-
+                <!-- Footer About -->
                 <div class="site-footer__about">
-
-                    <img
-                        src="images/logo.png"
-                        alt="شعار صندوق المشاوز التكافلي التنموي"
-                    >
-
-
+                    <a href="../-/Index/index.html" class="site-footer__logo">
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #4CAF50, #2E7D32); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1.2rem;">
+                                <i class="fa-solid fa-hands-holding-child"></i>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="font-weight: 800; font-size: 1.1rem; color: #FFFFFF; line-height: 1.2;">صندوق المشاوز</span>
+                                <span style="font-size: 0.75rem; color: rgba(250, 250, 250, 0.7); font-weight: 600;">التكافلي التنموي</span>
+                            </div>
+                        </div>
+                    </a>
                     <p>
-
-                        صندوق المشاوز التكافلي التنموي
-                        يهدف إلى دعم التنمية والتكافل
-                        الاجتماعي في قرية المشاوز.
-
+                        صندوق مجتمعي يهدف إلى دعم التنمية المستدامة والتكافل الاجتماعي في قرية المشاوز بمحافظة تعز، اليمن.
                     </p>
-
                 </div>
 
+                <!-- Quick Links -->
+                <div class="site-footer__links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="../-/Index/index.html">الرئيسية</a></li>
+                        <li><a href="about.html">عن الصندوق</a></li>
+                        <li><a href="village.html">عن قرية المشاوز</a></li>
+                        <li><a href="projects.html">المشاريع التنموية</a></li>
+                        <li><a href="solidarity.html">المشاريع التكافلية</a></li>
+                        <li><a href="news.html">أخبار القرية</a></li>
+                        <li><a href="governance.html">الحوكمة</a></li>
+                    </ul>
+                </div>
 
-
-                <!-- Contact -->
-
+                <!-- Contact Information -->
                 <div class="site-footer__contact">
-
-                    <h3>
-                        تواصل معنا
-                    </h3>
-
-
-                    <p>
-
-                        الهاتف:
-
-                        <a href="tel:780810312">
-                            780810312
-                        </a>
-
-                    </p>
-
-
-                    <p>
-
-                        البريد الإلكتروني:
-
-                        <a href="mailto:info@mashawizfund.org">
-                            info@mashawizfund.org
-                        </a>
-
-                    </p>
-
+                    <h3>تواصل معنا</h3>
+                    <address>
+                        <p>
+                            <strong>الهاتف:</strong>
+                            <a href="tel:780810312">780810312</a>
+                        </p>
+                        <p>
+                            <strong>البريد الإلكتروني:</strong>
+                            <a href="mailto:info@mashawizfund.org">info@mashawizfund.org</a>
+                        </p>
+                        <p>
+                            <strong>العنوان:</strong>
+                            قرية المشاوز، محافظة تعز، اليمن
+                        </p>
+                    </address>
                 </div>
 
+                <!-- Social Media -->
+                <div class="site-footer__social">
+                    <h3>تابعنا على</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="فيسبوك"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                        <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i> X</a>
+                    </div>
+                </div>
 
             </div>
 
+            <!-- Footer Bottom -->
+            <div class="site-footer__bottom">
+                <p>
+                    جميع الحقوق محفوظة © 2026 صندوق المشاوز التكافلي التنموي
+                </p>
+            </div>
+
         </div>
-
-    </footer>
-
-
-</body>
-
-</html>
+     </footer>
