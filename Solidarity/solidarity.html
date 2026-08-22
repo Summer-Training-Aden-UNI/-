@@ -22,7 +22,7 @@
     >
 
     <!-- Main Design System -->
-    <link rel="stylesheet" href="../Solidarity/main.css">
+    <link rel="stylesheet" href="../Index/css/main.css">
 
     <!-- Existing Shared Styles -->
     <link rel="stylesheet" href="../Index/css/header.css">
@@ -49,15 +49,12 @@
             </a>
 
             <!-- Mobile Menu Button -->
-            <button
-                class="site-header__menu-toggle"
-                type="button"
-                aria-label="فتح القائمة"
-            >
+            <input type="checkbox" id="menu-toggle" class="site-header__menu-checkbox" aria-label="فتح القائمة">
+            <label for="menu-toggle" class="site-header__menu-toggle" aria-label="فتح القائمة">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+            </label>
 
             <!-- Main Navigation -->
             <nav class="site-header__nav" aria-label="القائمة الرئيسية">
