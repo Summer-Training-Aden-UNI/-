@@ -31,114 +31,93 @@
      HEADER / NAVBAR
      Same header as homepage
 ====================================================== -->
+ <header class="site-header">
 
-<header class="site-header">
+        <div class="container">
 
-    <div class="container">
+            <!-- Logo -->
+            <a href="../Index/index.html" class="site-header__logo">
+                <img src="../Images/logo.png" alt="شعار صندوق المشاوز التكافلي التنموي">
+            </a>
 
-        <!-- Logo -->
-        <a href="../Index/index.html" class="site-header__logo">
-            <img
-                src="../Images/logo.png"
-                alt="شعار صندوق المشاوز التكافلي التنموي"
-            >
-        </a>
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="menu-toggle" class="site-header__menu-checkbox" aria-label="فتح القائمة">
+            <label for="menu-toggle" class="site-header__menu-toggle" aria-label="فتح القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-        <!-- Mobile Menu Button -->
-        <button
-            class="site-header__menu-toggle"
-            type="button"
-            aria-label="فتح القائمة"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <!-- Main Navigation -->
+            <nav class="site-header__nav" aria-label="القائمة الرئيسية">
 
-        <!-- Main Navigation -->
-        <nav class="site-header__nav" aria-label="القائمة الرئيسية">
+                <ul class="site-header__nav-list">
 
-            <ul class="site-header__nav-list">
+                    <li class="site-header__nav-item">
+                        <a href="../Index/index.html">الرئيسية</a>
+                    </li>
 
-                <li class="site-header__nav-item">
-                    <a href="../Index/index.html">
-                        الرئيسية
-                    </a>
-                </li>
+                    <li class="site-header__nav-item">
+                        <a href="../about/about.html">عن الصندوق</a>
+                    </li>
 
-                <li class="site-header__nav-item">
-                    <a href=".../About/about.html">
-                        عن الصندوق
-                    </a>
-                </li>
+                    <li class="site-header__nav-item">
+                        <a href="../village/village.html">عن قرية المشاوز</a>
+                    </li>
 
-                <li class="site-header__nav-item">
-                    <a href=".../village/village.html" class="active">
-                        عن قرية المشاوز
-                    </a>
-                </li>
+                    <!-- Projects Dropdown -->
+                    <li class="site-header__nav-item site-header__nav-item--dropdown">
 
-                <!-- Projects Dropdown -->
-                <li class="site-header__nav-item site-header__nav-item--dropdown">
+                        <a href="../project/projects.html">
+                            المشاريع
+                        </a>
 
-                    <a href=".../projects/projects.html">
-                        المشاريع
-                    </a>
+                        <ul class="site-header__dropdown">
 
-                    <ul class="site-header__dropdown">
+                            <li>
+                                <a href="..//project/projects.html">
+                                    المشاريع التنموية
+                                </a>
+                            </li>
 
-                        <li>
-                            <a href=".../projects/projects.html">
-                                المشاريع التنموية
-                            </a>
-                        </li>
+                            <li>
+                                <a href="../Solidarity/solidarity.html">
+                                    المشاريع التكافلية
+                                </a>
+                            </li>
 
-                        <li>
-                            <a href=".../projects/solidarity.html">
-                                المشاريع التكافلية
-                            </a>
-                        </li>
+                        </ul>
 
-                    </ul>
+                    </li>
 
-                </li>
+                    <li class="site-header__nav-item">
+                        <a href="../news/news.html">أخبار القرية</a>
+                    </li>
 
-                <li class="site-header__nav-item">
-                    <a href="news.html">
-                        أخبار القرية
-                    </a>
-                </li>
+                    <li class="site-header__nav-item">
+                        <a href="../team/team.html">فريق العمل</a>
+                    </li>
 
-                <li class="site-header__nav-item">
-                    <a href=".../Team/team.html">
-                        فريق العمل
-                    </a>
-                </li>
+                    <li class="site-header__nav-item">
+                        <a href="../Governence/governence.html">الحوكمة</a>
+                    </li>
 
-                <li class="site-header__nav-item">
-                    <a href=".../Governance/governance.html">
-                        الحوكمة
-                    </a>
-                </li>
+                    <li class="site-header__nav-item">
+                        <a href="../contact/contact.html">تواصل معنا</a>
+                    </li>
 
-                <li class="site-header__nav-item">
-                    <a href=".../Contact/contact.html">
-                        تواصل معنا
-                    </a>
-                </li>
+                </ul>
 
-            </ul>
+            </nav>
 
-        </nav>
+            <!-- Main CTA -->
+            <a href="../contribute/contribute.html" class="btn btn--primary">
+                ساهم معنا
+            </a>
 
-        <!-- Main CTA -->
-        <a href="contribute.html" class="btn btn--primary">
-            ساهم معنا
-        </a>
+        </div>
 
-    </div>
-
-</header>
+    </header>
 
 
     <main>

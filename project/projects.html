@@ -24,75 +24,65 @@
 
 <body>
 
-    <!-- =====================================================
+       <!-- ==============================
          HEADER / NAVBAR
-    ====================================================== -->
+    =============================== -->
 
-    <header class="site-header">
+   <!-- =====================================================
+     HEADER / NAVBAR
+     Same header as homepage
+====================================================== -->
+ <header class="site-header">
 
         <div class="container">
 
             <!-- Logo -->
-            <a href="index.html" class="site-header__logo">
-                <img
-                    src="../Images/logo.png"
-                    alt="شعار صندوق المشاوز التكافلي التنموي"
-                >
+            <a href="../Index/index.html" class="site-header__logo">
+                <img src="../Images/logo.png" alt="شعار صندوق المشاوز التكافلي التنموي">
             </a>
 
-
-            <!-- Mobile Menu Button -->
-            <button
-                class="site-header__menu-toggle"
-                type="button"
-                aria-label="فتح القائمة"
-            >
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="menu-toggle" class="site-header__menu-checkbox" aria-label="فتح القائمة">
+            <label for="menu-toggle" class="site-header__menu-toggle" aria-label="فتح القائمة">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+            </label>
 
-
-            <!-- Navigation -->
+            <!-- Main Navigation -->
             <nav class="site-header__nav" aria-label="القائمة الرئيسية">
 
                 <ul class="site-header__nav-list">
 
                     <li class="site-header__nav-item">
-                        <a href=".../index/index.html">
-                            الرئيسية
-                        </a>
+                        <a href="../Index/index.html">الرئيسية</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href=".../about/about.html">
-                            عن الصندوق
-                        </a>
+                        <a href="../about/about.html">عن الصندوق</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href=".../village/village.html">
-                            عن قرية المشاوز
-                        </a>
+                        <a href="../village/village.html">عن قرية المشاوز</a>
                     </li>
 
                     <!-- Projects Dropdown -->
                     <li class="site-header__nav-item site-header__nav-item--dropdown">
 
-                        <a href=".../projects/projects.html" class="active">
+                        <a href="../project/projects.html">
                             المشاريع
                         </a>
 
                         <ul class="site-header__dropdown">
 
                             <li>
-                                <a href=".../projects/projects.html">
+                                <a href="projects.html">
                                     المشاريع التنموية
                                 </a>
                             </li>
 
                             <li>
-                                <a href=".../projects/solidarity.html">
+                                <a href="../Solidarity/solidarity.html">
                                     المشاريع التكافلية
                                 </a>
                             </li>
@@ -102,36 +92,27 @@
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="../news/news.html">
-                            أخبار القرية
-                        </a>
+                        <a href="../news/news.html">أخبار القرية</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="../team/team.html">
-                            فريق العمل
-                        </a>
+                        <a href="../team/team.html">فريق العمل</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="../Governence/governence.html">
-                            الحوكمة
-                        </a>
+                        <a href="../Governence/governence.html">الحوكمة</a>
                     </li>
 
                     <li class="site-header__nav-item">
-                        <a href="../Contact/contact.html">
-                            تواصل معنا
-                        </a>
+                        <a href="../contact/contact.html">تواصل معنا</a>
                     </li>
 
                 </ul>
 
             </nav>
 
-
-            <!-- CTA -->
-            <a href="../Contribute/contribute.html" class="btn btn--primary">
+            <!-- Main CTA -->
+            <a href="../contribute/contribute.html" class="btn btn--primary">
                 ساهم معنا
             </a>
 
