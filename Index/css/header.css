@@ -14,7 +14,7 @@
     box-shadow: var(--shadow-sm);
 }
 
-.site-header > .container {
+.site-header>.container {
     min-height: 80px;
 
     display: flex;
@@ -58,7 +58,7 @@
     position: relative;
 }
 
-.site-header__nav-item > a {
+.site-header__nav-item>a {
     display: flex;
     align-items: center;
 
@@ -76,7 +76,7 @@
         background-color var(--transition-fast);
 }
 
-.site-header__nav-item > a:hover {
+.site-header__nav-item>a:hover {
     color: var(--primary-color);
     background-color: rgba(46, 125, 50, 0.08);
 }
@@ -85,7 +85,7 @@
 /* -------------------------
    Dropdown
 ------------------------- */
-.site-header__nav-item--dropdown > a::after {
+.site-header__nav-item--dropdown>a::after {
     content: "⌄";
 
     margin-right: 0.4rem;
@@ -118,10 +118,10 @@
         opacity var(--transition-normal),
         visibility var(--transition-normal),
         transform var(--transition-normal);
-         
-        z-index: 2000;
 
-    }
+    z-index: 2000;
+
+}
 
 .site-header__nav-item--dropdown:hover .site-header__dropdown {
     opacity: 1;
@@ -151,13 +151,22 @@
 /* -------------------------
    CTA
 ------------------------- */
-.site-header > .container > .btn {
+.site-header>.container>.btn {
     flex-shrink: 0;
 }
 
 
 /* -------------------------
-   Mobile Menu Button
+   Mobile Menu Checkbox (hidden)
+   
+------------------------- */
+.site-header__menu-checkbox {
+    display: none;
+}
+
+
+/* -------------------------
+   Mobile Menu Button (label)
 ------------------------- */
 .site-header__menu-toggle {
     display: none;
@@ -169,6 +178,8 @@
 
     background: transparent;
     border: 0;
+
+    cursor: pointer;
 }
 
 .site-header__menu-toggle span {
@@ -181,4 +192,26 @@
 
     background-color: var(--text-dark);
     border-radius: 3px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* -------------------------
+   Hamburger → X animation
+   When the checkbox is checked, the three
+   bars morph into an X.
+------------------------- */
+.site-header__menu-checkbox:checked~.site-header__menu-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.site-header__menu-checkbox:checked~.site-header__menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.site-header__menu-checkbox:checked~.site-header__menu-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
