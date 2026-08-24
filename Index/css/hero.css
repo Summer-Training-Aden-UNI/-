@@ -148,3 +148,319 @@
     color: rgba(250, 250, 250, 0.85);
     font-size: 1.1rem;
 }
+
+
+/* ============================================================
+       TEAM PAGE — INLINE STYLES (Hero)
+    ============================================================ */
+
+
+
+
+ /* ---------- HERO ---------- */
+    .team-hero {
+        position: relative;
+        min-height: 520px;
+        display: flex;
+        align-items: center;
+        background:
+            linear-gradient(135deg,
+                rgba(27, 94, 32, .96) 0%,
+                rgba(49, 27, 146, .88) 60%,
+                rgba(249, 168, 37, .35) 100%),
+            url('../Images/index_hero.jpeg') center/cover no-repeat;
+        overflow: hidden;
+        padding: 6.5rem 0 4.5rem;
+    }
+
+    /* animated blobs */
+    .team-hero::before,
+    .team-hero::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        opacity: .10;
+        animation: teamBlob 9s ease-in-out infinite alternate;
+    }
+    .team-hero::before {
+        width: 480px; height: 480px;
+        background: var(--accent-color);
+        top: -110px; right: -90px;
+    }
+    .team-hero::after {
+        width: 340px; height: 340px;
+        background: #fff;
+        bottom: -70px; left: -70px;
+        animation-delay: -5s;
+    }
+    @keyframes teamBlob {
+        from { transform: scale(1) translate(0, 0); }
+        to   { transform: scale(1.18) translate(-18px, 18px); }
+    }
+
+    /* decorative circles */
+    .team-hero__decor {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    .team-hero__decor span {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,.07);
+    }
+    .team-hero__decor span:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 5%; }
+    .team-hero__decor span:nth-child(2) { width: 180px; height: 180px; top: 55%; left: 20%; }
+    .team-hero__decor span:nth-child(3) { width: 420px; height: 420px; top: -8%; right: 12%; }
+
+    .team-hero__content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: #fff;
+    }
+
+    .team-hero__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        background: rgba(249,168,37,.18);
+        border: 1px solid rgba(249,168,37,.5);
+        color: var(--accent-color);
+        font-size: .85rem;
+        font-weight: 700;
+        padding: .4rem 1.2rem;
+        border-radius: 30px;
+        letter-spacing: .05em;
+        margin-bottom: 1.2rem;
+        backdrop-filter: blur(6px);
+    }
+
+    .team-hero__title {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 900;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 20px rgba(0,0,0,.45);
+    }
+    .team-hero__title span { color: var(--accent-color); }
+
+    .team-hero__description {
+        font-size: 1.05rem;
+        color: rgba(255,255,255,.87);
+        max-width: 580px;
+        margin: 0 auto 2.2rem;
+        line-height: 1.75;
+    }
+
+    /* Breadcrumb */
+    .team-hero__breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        font-size: .85rem;
+        color: rgba(255,255,255,.6);
+        margin-bottom: 2.5rem;
+    }
+    .team-hero__breadcrumb a {
+        color: rgba(255,255,255,.75);
+        text-decoration: none;
+        transition: color .25s;
+    }
+    .team-hero__breadcrumb a:hover { color: var(--accent-color); }
+    .team-hero__breadcrumb .active { color: #fff; font-weight: 600; }
+
+    /* Stats strip */
+    .team-hero__stats {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,.14);
+    }
+    .team-hero__stat { text-align: center; }
+    .team-hero__stat-value {
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--accent-color);
+        display: block;
+        line-height: 1;
+    }
+    .team-hero__stat-label {
+        font-size: .8rem;
+        color: rgba(255,255,255,.68);
+        margin-top: .28rem;
+        display: block;
+    }
+
+    /* wave divider */
+    .team-hero-wave {
+        display: block;
+        width: 100%;
+        margin-top: -2px;
+        line-height: 0;
+    }
+    .team-hero-wave svg { display: block; width: 100%; }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+        .team-hero { padding: 5rem 0 3rem; min-height: auto; }
+        .team-hero__stats { gap: 1.5rem; }
+    } /* ---------- HERO ---------- */
+    .team-hero {
+        position: relative;
+        min-height: 520px;
+        display: flex;
+        align-items: center;
+        background:
+            linear-gradient(135deg,
+                rgba(27, 94, 32, .96) 0%,
+                rgba(49, 27, 146, .88) 60%,
+                rgba(249, 168, 37, .35) 100%),
+            url('../Images/index_hero.jpeg') center/cover no-repeat;
+        overflow: hidden;
+        padding: 6.5rem 0 4.5rem;
+    }
+
+    /* animated blobs */
+    .team-hero::before,
+    .team-hero::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        opacity: .10;
+        animation: teamBlob 9s ease-in-out infinite alternate;
+    }
+    .team-hero::before {
+        width: 480px; height: 480px;
+        background: var(--accent-color);
+        top: -110px; right: -90px;
+    }
+    .team-hero::after {
+        width: 340px; height: 340px;
+        background: #fff;
+        bottom: -70px; left: -70px;
+        animation-delay: -5s;
+    }
+    @keyframes teamBlob {
+        from { transform: scale(1) translate(0, 0); }
+        to   { transform: scale(1.18) translate(-18px, 18px); }
+    }
+
+    /* decorative circles */
+    .team-hero__decor {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    .team-hero__decor span {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,.07);
+    }
+    .team-hero__decor span:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 5%; }
+    .team-hero__decor span:nth-child(2) { width: 180px; height: 180px; top: 55%; left: 20%; }
+    .team-hero__decor span:nth-child(3) { width: 420px; height: 420px; top: -8%; right: 12%; }
+
+    .team-hero__content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: #fff;
+    }
+
+    .team-hero__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        background: rgba(249,168,37,.18);
+        border: 1px solid rgba(249,168,37,.5);
+        color: var(--accent-color);
+        font-size: .85rem;
+        font-weight: 700;
+        padding: .4rem 1.2rem;
+        border-radius: 30px;
+        letter-spacing: .05em;
+        margin-bottom: 1.2rem;
+        backdrop-filter: blur(6px);
+    }
+
+    .team-hero__title {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 900;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 20px rgba(0,0,0,.45);
+    }
+    .team-hero__title span { color: var(--accent-color); }
+
+    .team-hero__description {
+        font-size: 1.05rem;
+        color: rgba(255,255,255,.87);
+        max-width: 580px;
+        margin: 0 auto 2.2rem;
+        line-height: 1.75;
+    }
+
+    /* Breadcrumb */
+    .team-hero__breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        font-size: .85rem;
+        color: rgba(255,255,255,.6);
+        margin-bottom: 2.5rem;
+    }
+    .team-hero__breadcrumb a {
+        color: rgba(255,255,255,.75);
+        text-decoration: none;
+        transition: color .25s;
+    }
+    .team-hero__breadcrumb a:hover { color: var(--accent-color); }
+    .team-hero__breadcrumb .active { color: #fff; font-weight: 600; }
+
+    /* Stats strip */
+    .team-hero__stats {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,.14);
+    }
+    .team-hero__stat { text-align: center; }
+    .team-hero__stat-value {
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--accent-color);
+        display: block;
+        line-height: 1;
+    }
+    .team-hero__stat-label {
+        font-size: .8rem;
+        color: rgba(255,255,255,.68);
+        margin-top: .28rem;
+        display: block;
+    }
+
+    /* wave divider */
+    .team-hero-wave {
+        display: block;
+        width: 100%;
+        margin-top: -2px;
+        line-height: 0;
+    }
+    .team-hero-wave svg { display: block; width: 100%; }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+        .team-hero { padding: 5rem 0 3rem; min-height: auto; }
+        .team-hero__stats { gap: 1.5rem; }
+    }
