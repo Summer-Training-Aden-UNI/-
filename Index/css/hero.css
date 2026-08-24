@@ -313,7 +313,7 @@
     } /* ---------- HERO ---------- */
     .team-hero {
         position: relative;
-        min-height: 520px;
+        min-height: 300px;
         display: flex;
         align-items: center;
         background:
@@ -336,7 +336,7 @@
         animation: teamBlob 9s ease-in-out infinite alternate;
     }
     .team-hero::before {
-        width: 480px; height: 480px;
+        width: 200px; height: 480px;
         background: var(--accent-color);
         top: -110px; right: -90px;
     }
@@ -506,7 +506,7 @@
     /* ---------- HERO ---------- */
     .news-hero {
         position: relative;
-        min-height: 520px;
+        min-height: 400px;
         display: flex;
         align-items: center;
         background:
@@ -587,7 +587,7 @@
     }
 
     /* Search box */
-    .news-hero__search-box {
+    /*.news-hero__search-box {
         display: flex;
         justify-content: center;
         max-width: 560px;
