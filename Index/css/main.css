@@ -246,7 +246,7 @@ p {
 }
 
 .btn--outline:hover {
-    color: var(--white);
+    color: var(--primary-color);
     background-color: var(--primary-color);
 }
 /* -------------------------
