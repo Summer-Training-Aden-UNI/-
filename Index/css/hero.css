@@ -684,6 +684,9 @@
     /* ---------- SECTION HEADINGS ---------- */
     .section-heading { text-align: center; margin-bottom: 2.5rem; }
     .section-heading__label {
+        position: relative;
+    left: 6px;
+    top: -5px;
         display: inline-block;
         background: linear-gradient(90deg, #2e7d32, #4caf50);
         color: #fff;
