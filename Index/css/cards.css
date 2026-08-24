@@ -56,6 +56,10 @@
 }
 
 .stat-card__number {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primary-color);
 
     font-size: clamp(2.5rem, 5vw, 3.5rem);

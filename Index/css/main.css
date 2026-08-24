@@ -333,6 +333,13 @@ p {
     text-align: center;
 }
 
+/* about page icons */
+.card-icon{
+    width: 48px;
+    height: 48px;
+    color: var(--primary-color);
+    display: block;
+}
 
 /* -------------------------
    Global Sections
