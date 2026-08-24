@@ -385,6 +385,8 @@ p {
     display: inline-flex;
     align-items: center;
     gap: var(--space-sm);
+    position: relative;
+top: -6px;
 
     color: var(--primary-color);
     font-size: var(--font-size-sm);
