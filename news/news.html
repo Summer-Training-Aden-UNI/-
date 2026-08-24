@@ -127,13 +127,8 @@
                     تابع أولاً بأول كافة الإنجازات التنموية، الأنشطة التكافلية، والتقارير الإدارية والفعاليات المجتمعية في القرية.
                 </p>
 
-                <!-- Hero Live Search -->
-                <div class="news-hero__search-box">
-                    <input type="text" class="news-hero__search-input" id="heroSearchInput" placeholder="ابحث عن مشروع، خبر، أو فعالية في القرية...">
-                    <button class="news-hero__search-btn" type="button" id="heroSearchBtn">
-                        <i class="fa-solid fa-magnifying-glass"></i> بحث
-                    </button>
-                </div>
+
+
 
                 <!-- Breadcrumb -->
                 <nav class="news-hero__breadcrumb" aria-label="مسار التنقل">
@@ -232,26 +227,7 @@
         ====================================================== -->
         <section class="news-main-section">
             <div class="container">
-
-                <!-- Filter & Controls Bar -->
-                <div class="news-filter-bar">
-                    <div class="news-tabs" id="newsCategoriesTabs">
-                        <button class="tab-btn active" data-category="all">الكل (6)</button>
-                        <button class="tab-btn" data-category="development">المشاريع التنموية</button>
-                        <button class="tab-btn" data-category="solidarity">المبادرات التكافلية</button>
-                        <button class="tab-btn" data-category="village">أخبار القرية</button>
-                        <button class="tab-btn" data-category="reports">التقارير والحوكمة</button>
-                    </div>
-
-                    <div class="news-sort-box">
-                        <label for="newsSortSelect"><i class="fa-solid fa-filter"></i> الترتيب:</label>
-                        <select id="newsSortSelect" class="news-sort-select">
-                            <option value="latest">الأحدث أولاً</option>
-                            <option value="popular">الأكثر قراءة</option>
-                            <option value="oldest">الأقدم أولاً</option>
-                        </select>
-                    </div>
-                </div>
+                
 
                 <!-- News Layout: Grid + Sidebar -->
                 <div class="news-layout">
@@ -284,10 +260,7 @@
                                         <a href="#" class="news-card__link">
                                             اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
                                         </a>
-                                        <div class="news-card__actions">
-                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
-                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </article>
@@ -315,10 +288,7 @@
                                         <a href="#" class="news-card__link">
                                             اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
                                         </a>
-                                        <div class="news-card__actions">
-                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
-                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </article>
@@ -346,10 +316,7 @@
                                         <a href="#" class="news-card__link">
                                             اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
                                         </a>
-                                        <div class="news-card__actions">
-                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
-                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </article>
@@ -377,10 +344,7 @@
                                         <a href="#" class="news-card__link">
                                             اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
                                         </a>
-                                        <div class="news-card__actions">
-                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
-                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </article>
@@ -408,10 +372,7 @@
                                         <a href="#" class="news-card__link">
                                             اقرأ التقرير <i class="fa-solid fa-chevron-left"></i>
                                         </a>
-                                        <div class="news-card__actions">
-                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
-                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </article>
@@ -439,40 +400,21 @@
                                         <a href="#" class="news-card__link">
                                             اقرأ المزيد <i class="fa-solid fa-chevron-left"></i>
                                         </a>
-                                        <div class="news-card__actions">
-                                            <button class="icon-btn" title="حفظ الخبر"><i class="fa-regular fa-bookmark"></i></button>
-                                            <button class="icon-btn" title="مشاركة الخبر"><i class="fa-solid fa-share-nodes"></i></button>
-                                        </div>
+            
                                     </div>
                                 </div>
                             </article>
 
                         </div>
 
-                        <!-- Pagination Nav -->
-                        <div class="pagination">
-                            <a href="#" class="pagination__item" aria-label="الصفحة السابقة"><i class="fa-solid fa-chevron-right"></i></a>
-                            <a href="#" class="pagination__item active">1</a>
-                            <a href="#" class="pagination__item">2</a>
-                            <a href="#" class="pagination__item">3</a>
-                            <a href="#" class="pagination__item" aria-label="الصفحة التالية"><i class="fa-solid fa-chevron-left"></i></a>
-                        </div>
+                
 
                     </div>
 
                     <!-- Right: Sidebar Widgets -->
                     <aside class="sidebar">
 
-                        <!-- Widget 1: Search Box -->
-                        <div class="widget widget-search">
-                            <h3 class="widget__title">البحث في الأخبار</h3>
-                            <form class="widget-search__form" onsubmit="return false;">
-                                <input type="text" class="widget-search__input" id="sidebarSearchInput" placeholder="أدخل كلمة البحث...">
-                                <button type="button" class="widget-search__btn" id="sidebarSearchBtn">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </button>
-                            </form>
-                        </div>
+
 
                         <!-- Widget 2: Popular Articles -->
                         <div class="widget">
@@ -516,63 +458,7 @@
                             </div>
                         </div>
 
-                        <!-- Widget 3: Categories List -->
-                        <div class="widget">
-                            <h3 class="widget__title">أقسام الأخبار</h3>
-                            <ul class="categories-list">
-                                <li class="categories-list__item">
-                                    <a href="#" data-filter="development">
-                                        <span><i class="fa-solid fa-hammer text-primary"></i> المشاريع التنموية</span>
-                                        <span class="categories-list__count">14</span>
-                                    </a>
-                                </li>
-                                <li class="categories-list__item">
-                                    <a href="#" data-filter="solidarity">
-                                        <span><i class="fa-solid fa-hand-holding-heart"></i> المبادرات التكافلية</span>
-                                        <span class="categories-list__count">9</span>
-                                    </a>
-                                </li>
-                                <li class="categories-list__item">
-                                    <a href="#" data-filter="village">
-                                        <span><i class="fa-solid fa-users"></i> أخبار وفعاليات القرية</span>
-                                        <span class="categories-list__count">12</span>
-                                    </a>
-                                </li>
-                                <li class="categories-list__item">
-                                    <a href="#" data-filter="reports">
-                                        <span><i class="fa-solid fa-file-contract"></i> التقارير والحوكمة</span>
-                                        <span class="categories-list__count">6</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
 
-                        <!-- Widget 4: Newsletter -->
-                        <div class="widget widget-newsletter">
-                            <h3 class="widget__title">النشرة الإخبارية</h3>
-                            <p>اشترك معنا ليصلك جديد أخبار ومشاريع قرية المشاوز عبر الواتساب أو البريد.</p>
-                            <form class="newsletter-form" id="newsletterForm" onsubmit="alert('تم الاشتراك بنجاح في نشرة أخبار المشاوز!'); return false;">
-                                <input type="text" class="newsletter-input" placeholder="اسمك الكريم..." required>
-                                <input type="text" class="newsletter-input" placeholder="رقم الواتساب أو البريد..." required>
-                                <button type="submit" class="btn btn--accent" style="width: 100%;">
-                                    <i class="fa-solid fa-paper-plane"></i> اشترك الآن
-                                </button>
-                            </form>
-                        </div>
-
-                        <!-- Widget 5: Tags Cloud -->
-                        <div class="widget">
-                            <h3 class="widget__title">وسوم شائعة</h3>
-                            <div class="tags-cloud">
-                                <a href="#" class="tag-item">#قرية_المشاوز</a>
-                                <a href="#" class="tag-item">#طاقة_شمسية</a>
-                                <a href="#" class="tag-item">#مشروع_المياه</a>
-                                <a href="#" class="tag-item">#تعليم</a>
-                                <a href="#" class="tag-item">#رصف_الطرق</a>
-                                <a href="#" class="tag-item">#تكافل_اجتماعي</a>
-                                <a href="#" class="tag-item">#تقرير_مالي</a>
-                            </div>
-                        </div>
 
                     </aside>
 
@@ -596,7 +482,7 @@
                     <div class="media-card">
                         <img src="images/news_featured.png" alt="فيديو تشغيل مشروع المياه">
                         <div class="media-card__overlay">
-                            <a href="#" class="media-card__play-btn" title="تشغيل الفيديو"><i class="fa-solid fa-play"></i></a>
+
                             <h3 class="media-card__title">فيديو: لحظات تشغيل مضخات المياه بالطاقة الشمسية</h3>
                         </div>
                     </div>
@@ -604,7 +490,7 @@
                     <div class="media-card">
                         <img src="images/news_road.png" alt="فيديو رصف الطريق">
                         <div class="media-card__overlay">
-                            <a href="#" class="media-card__play-btn" title="تشغيل الفيديو"><i class="fa-solid fa-play"></i></a>
+                            
                             <h3 class="media-card__title">وثائقي قصير: جهود أبناء القرية في رصف العقبة</h3>
                         </div>
                     </div>
@@ -612,7 +498,7 @@
                     <div class="media-card">
                         <img src="images/news_school.png" alt="معرض صور تكريم الطلاب">
                         <div class="media-card__overlay">
-                            <a href="#" class="media-card__play-btn" title="عرض الألبوم"><i class="fa-solid fa-images"></i></a>
+                            
                             <h3 class="media-card__title">ألبوم صور: حفل تكريم الطلاب المتفوقين لعام 2026</h3>
                         </div>
                     </div>
@@ -620,23 +506,7 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             CALL TO ACTION BANNER
-        ====================================================== -->
-        <div class="container">
-            <section class="news-cta-banner">
-                <h2>هل لديك خبر أو مبادرة تود مشاركتها؟</h2>
-                <p>اللجنة الإعلامية لصندوق المشاوز ترحب دائماً بمساهمات أبناء القرية وتغطية مبادراتهم المجتمعية.</p>
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="../contact/contact.html" class="btn btn--accent">
-                        <i class="fa-solid fa-envelope"></i> تواصل مع اللجنة الإعلامية
-                    </a>
-                    <a href="../contribute/contribute.html" class="btn btn--outline" style="color: white; border-color: white;">
-                        <i class="fa-solid fa-hand-holding-heart"></i> تقديم دعم لمشروع
-                    </a>
-                </div>
-            </section>
-        </div>
+     
 
     </main>
 
