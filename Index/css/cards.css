@@ -441,3 +441,340 @@
 
     color: rgba(255, 255, 255, 0.9);
 }
+
+.info-card {
+    padding: var(--space-2xl);
+
+    background-color: var(--bg-white);
+
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.info-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: var(--space-lg);
+
+    color: var(--text-light);
+    background-color: var(--primary-color);
+
+    border-radius: var(--radius-sm);
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.info-card:nth-child(2) .info-card__icon {
+    background-color: var(--secondary-color);
+}
+
+.info-card:nth-child(3) .info-card__icon {
+    color: var(--text-dark);
+    background-color: var(--accent-color);
+}
+
+.info-card__title {
+    margin-bottom: var(--space-md);
+    font-size: var(--heading-sm);
+}
+
+.info-card__text {
+    line-height: 1.9;
+}
+
+.structure {
+    max-width: 900px;
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+.structure__main {
+    display: flex;
+    justify-content: center;
+}
+
+.structure-card {
+    width: 100%;
+
+    padding: var(--space-xl);
+
+    background-color: var(--bg-white);
+
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+
+    text-align: right;
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.structure-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.structure-card--primary {
+    max-width: 520px;
+    border-top: 4px solid var(--primary-color);
+}
+
+.structure-card__tag {
+    display: inline-block;
+
+    margin-bottom: var(--space-sm);
+    padding: 4px 12px;
+
+    color: var(--primary-color);
+    background-color: #EAF5EA;
+
+    border-radius: 30px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.structure-card__tag--blue {
+    color: var(--secondary-color);
+    background-color: #E8F1FC;
+}
+
+.structure-card__tag--gold {
+    color: #8A6500;
+    background-color: #FFF4D5;
+}
+
+.structure-card__title {
+    margin-bottom: var(--space-sm);
+    font-size: 1.4rem;
+}
+
+.structure-card__text {
+    line-height: 1.9;
+}
+
+.structure__line {
+    width: 2px;
+    height: 50px;
+
+    margin-inline: auto;
+
+    background-color: var(--border-medium);
+}
+
+.structure__children {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+.principle-card {
+    position: relative;
+
+    padding: var(--space-xl);
+    min-height: 210px;
+
+    background-color: var(--bg-white);
+
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+
+    overflow: hidden;
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.principle-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    left: -30px;
+    bottom: -35px;
+
+    border-radius: 50%;
+
+    background-color: rgba(46, 125, 50, 0.06);
+}
+
+.principle-card__number {
+    display: block;
+    margin-bottom: var(--space-xl);
+
+    color: var(--primary-color);
+
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.principle-card h3 {
+    margin-bottom: var(--space-sm);
+    font-size: 1.3rem;
+}
+
+.principle-card p {
+    line-height: 1.8;
+}
+.solidarity-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    min-height: 240px;
+
+    overflow: hidden;
+
+    background-color: var(--bg-white);
+
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.solidarity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.solidarity-card__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 240px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--primary-color),
+            var(--primary-light)
+        );
+
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.solidarity-card__visual--blue {
+    background:
+        linear-gradient(
+            145deg,
+            #1565C0,
+            #1976D2
+        );
+}
+
+.solidarity-card__visual--gold {
+    color: var(--text-dark);
+
+    background:
+        linear-gradient(
+            145deg,
+            #F9A825,
+            #FFD166
+        );
+}
+
+.solidarity-card__visual--dark {
+    background:
+        linear-gradient(
+            145deg,
+            #1B2A1B,
+            #315A31
+        );
+}
+
+.solidarity-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: var(--space-xl);
+}
+
+.solidarity-card__category {
+    display: inline-block;
+
+    margin-bottom: var(--space-sm);
+    padding: 4px 12px;
+
+    color: var(--primary-color);
+    background-color: #EAF5EA;
+
+    border-radius: 30px;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.solidarity-card__title {
+    margin-bottom: var(--space-sm);
+    font-size: 1.4rem;
+}
+
+.solidarity-card__text {
+    margin-bottom: var(--space-lg);
+    line-height: 1.85;
+}
+
+.solidarity-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: auto;
+
+    color: var(--primary-color);
+    font-weight: 700;
+
+    transition:
+        gap var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.solidarity-card__link:hover {
+    gap: 12px;
+    color: var(--secondary-color);
+}
